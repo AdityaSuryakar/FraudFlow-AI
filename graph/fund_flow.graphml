@@ -1,0 +1,3970 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d12" for="edge" attr.name="fraud_scenario" attr.type="string" />
+  <key id="d11" for="edge" attr.name="fraud_label" attr.type="string" />
+  <key id="d10" for="edge" attr.name="channel" attr.type="string" />
+  <key id="d9" for="edge" attr.name="tx_type" attr.type="string" />
+  <key id="d8" for="edge" attr.name="timestamp" attr.type="string" />
+  <key id="d7" for="edge" attr.name="amount" attr.type="double" />
+  <key id="d6" for="edge" attr.name="txn_id" attr.type="string" />
+  <key id="d5" for="node" attr.name="risk_label" attr.type="string" />
+  <key id="d4" for="node" attr.name="last_active" attr.type="string" />
+  <key id="d3" for="node" attr.name="status" attr.type="string" />
+  <key id="d2" for="node" attr.name="account_type" attr.type="string" />
+  <key id="d1" for="node" attr.name="balance" attr.type="double" />
+  <key id="d0" for="node" attr.name="name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="ACC_001">
+      <data key="d0">Amit Shah</data>
+      <data key="d1">64552.22</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-11</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_002">
+      <data key="d0">Priya Nair</data>
+      <data key="d1">129997.01</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-23</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_003">
+      <data key="d0">Rahul Verma</data>
+      <data key="d1">60222.64</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-08</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_004">
+      <data key="d0">Sneha Patel</data>
+      <data key="d1">277229.6</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-03</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_005">
+      <data key="d0">Vikas Sharma</data>
+      <data key="d1">25573.51</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-18</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_006">
+      <data key="d0">Deepa Reddy</data>
+      <data key="d1">124003.84</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-25</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_007">
+      <data key="d0">Karan Mehta</data>
+      <data key="d1">285010.08</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-31</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_008">
+      <data key="d0">Ananya Iyer</data>
+      <data key="d1">353649.24</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-11</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_009">
+      <data key="d0">Sanjay Gupta</data>
+      <data key="d1">230112.43</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-24</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_010">
+      <data key="d0">Pooja Singh</data>
+      <data key="d1">435957.16</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-06</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_011">
+      <data key="d0">Nikhil Joshi</data>
+      <data key="d1">217081.06</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-09</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_012">
+      <data key="d0">Meera Pillai</data>
+      <data key="d1">115503.74</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-27</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_013">
+      <data key="d0">Arjun Rao</data>
+      <data key="d1">55445.46</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-28</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_014">
+      <data key="d0">Kavya Menon</data>
+      <data key="d1">425272.24</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-20</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_015">
+      <data key="d0">Rohan Das</data>
+      <data key="d1">405492.85</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-23</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_016">
+      <data key="d0">Swati Tiwari</data>
+      <data key="d1">272751.76</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-17</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_017">
+      <data key="d0">Manish Kumar</data>
+      <data key="d1">280499.91</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-29</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_018">
+      <data key="d0">Neha Bose</data>
+      <data key="d1">443871.36</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-12</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_019">
+      <data key="d0">Suresh Nair</data>
+      <data key="d1">104221.41</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-13</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_020">
+      <data key="d0">Divya Agarwal</data>
+      <data key="d1">334019.03</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-30</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_021">
+      <data key="d0">Aakash Yadav</data>
+      <data key="d1">429105.68</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-29</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_022">
+      <data key="d0">Lakshmi Murugan</data>
+      <data key="d1">146207.07</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-19</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_023">
+      <data key="d0">Vijay Patil</data>
+      <data key="d1">188767.77</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-05</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_024">
+      <data key="d0">Ritu Malhotra</data>
+      <data key="d1">112658.45</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-20</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_025">
+      <data key="d0">Shiv Pandey</data>
+      <data key="d1">468960.75</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-09</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_026">
+      <data key="d0">Aarti Desai</data>
+      <data key="d1">308474.19</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-29</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_027">
+      <data key="d0">Ramesh Chandra</data>
+      <data key="d1">367272.13</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-14</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_028">
+      <data key="d0">Usha Rani</data>
+      <data key="d1">195933.17</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-17</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_029">
+      <data key="d0">Neeraj Saxena</data>
+      <data key="d1">282905.37</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-09</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_030">
+      <data key="d0">Preeti Ghosh</data>
+      <data key="d1">422997.44</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-21</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_031">
+      <data key="d0">Ajay Bhatt</data>
+      <data key="d1">412683.27</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-24</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_032">
+      <data key="d0">Pallavi Hegde</data>
+      <data key="d1">141193.03</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-19</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_033">
+      <data key="d0">Vinod Mishra</data>
+      <data key="d1">472025.76</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-02</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_034">
+      <data key="d0">Shreya Kulkarni</data>
+      <data key="d1">114187.01</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-21</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_035">
+      <data key="d0">Manoj Tiwari</data>
+      <data key="d1">443494.75</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-19</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_036">
+      <data key="d0">Bhavna Shah</data>
+      <data key="d1">80007.08</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-17</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_037">
+      <data key="d0">Ankur Srivastava</data>
+      <data key="d1">375044.6</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-24</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_038">
+      <data key="d0">Chitra Nambiar</data>
+      <data key="d1">376036.77</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-23</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_039">
+      <data key="d0">Pankaj Mathur</data>
+      <data key="d1">295931.13</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-03</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_040">
+      <data key="d0">Sunita Roy</data>
+      <data key="d1">498689.63</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-24</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_041">
+      <data key="d0">Anil Kapoor</data>
+      <data key="d1">251822.76</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-15</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_042">
+      <data key="d0">Rekha Sharma</data>
+      <data key="d1">63728.07</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-04</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_043">
+      <data key="d0">Sunil Verma</data>
+      <data key="d1">398118.89</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-26</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_044">
+      <data key="d0">Geeta Patel</data>
+      <data key="d1">41128.58</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-12</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_045">
+      <data key="d0">Harish Gupta</data>
+      <data key="d1">498099.48</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-12</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_046">
+      <data key="d0">Nandita Basu</data>
+      <data key="d1">485828.41</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-23</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_047">
+      <data key="d0">Rajiv Menon</data>
+      <data key="d1">363153.69</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-10</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_048">
+      <data key="d0">Lata Krishnan</data>
+      <data key="d1">273115.46</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-03</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_049">
+      <data key="d0">Girish Jain</data>
+      <data key="d1">324071.28</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-07</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_050">
+      <data key="d0">Mamta Chauhan</data>
+      <data key="d1">223034.97</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-22</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_051">
+      <data key="d0">Tarun Bajaj</data>
+      <data key="d1">477369.8</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-31</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_052">
+      <data key="d0">Fiona D'souza</data>
+      <data key="d1">486225.17</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-23</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_053">
+      <data key="d0">Akash Pandey</data>
+      <data key="d1">457187.64</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-15</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_054">
+      <data key="d0">Ridhi Oberoi</data>
+      <data key="d1">422417.98</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-22</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_055">
+      <data key="d0">Dev Malhotra</data>
+      <data key="d1">107466.44</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-12</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_056">
+      <data key="d0">Sarika Tiwari</data>
+      <data key="d1">89159.03</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-07</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_057">
+      <data key="d0">Mukesh Lal</data>
+      <data key="d1">10280.23</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-02</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_058">
+      <data key="d0">Anjali Rajan</data>
+      <data key="d1">19543.6</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-16</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_059">
+      <data key="d0">Venkat Iyer</data>
+      <data key="d1">492807.48</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-03</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_060">
+      <data key="d0">Premlata Sen</data>
+      <data key="d1">38383.33</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-24</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_061">
+      <data key="d0">Siddharth Nair</data>
+      <data key="d1">51970.19</data>
+      <data key="d2">current</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-29</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_062">
+      <data key="d0">Kavitha Rao</data>
+      <data key="d1">43914.13</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-05</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_063">
+      <data key="d0">Brij Mohan</data>
+      <data key="d1">71622.65</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-07</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_064">
+      <data key="d0">Yasmin Khan</data>
+      <data key="d1">473955.85</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-16</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_065">
+      <data key="d0">Ravi Deshpande</data>
+      <data key="d1">268560.16</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-23</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_066">
+      <data key="d0">Sudha Hegde</data>
+      <data key="d1">482537.82</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-18</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_067">
+      <data key="d0">Amar Singh</data>
+      <data key="d1">367666.22</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-07</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_068">
+      <data key="d0">Jaya Pillai</data>
+      <data key="d1">162740.98</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-09</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_069">
+      <data key="d0">Pramod Dubey</data>
+      <data key="d1">192976.05</data>
+      <data key="d2">salary</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-11</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_070">
+      <data key="d0">Nalini Das</data>
+      <data key="d1">69292.06</data>
+      <data key="d2">savings</data>
+      <data key="d3">active</data>
+      <data key="d4">2023-12-17</data>
+      <data key="d5">normal</data>
+    </node>
+    <node id="ACC_071">
+      <data key="d0">Vivek Chatterjee</data>
+      <data key="d1">175661.93</data>
+      <data key="d2">salary</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2023-06-19</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_072">
+      <data key="d0">Sangeeta Bose</data>
+      <data key="d1">122756.22</data>
+      <data key="d2">savings</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2023-02-14</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_073">
+      <data key="d0">Hitesh Agarwal</data>
+      <data key="d1">44786.61</data>
+      <data key="d2">salary</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2023-07-04</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_074">
+      <data key="d0">Tanya Mehta</data>
+      <data key="d1">122181.47</data>
+      <data key="d2">savings</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2023-06-20</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_075">
+      <data key="d0">Umesh Chandra</data>
+      <data key="d1">171909.96</data>
+      <data key="d2">salary</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2022-11-27</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_076">
+      <data key="d0">Chandrika Nair</data>
+      <data key="d1">146453.86</data>
+      <data key="d2">current</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2023-05-06</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_077">
+      <data key="d0">Dinesh Patil</data>
+      <data key="d1">274224.63</data>
+      <data key="d2">salary</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2023-05-12</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_078">
+      <data key="d0">Sharmila Sharma</data>
+      <data key="d1">292343.71</data>
+      <data key="d2">savings</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2023-02-09</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_079">
+      <data key="d0">Gopal Yadav</data>
+      <data key="d1">241756.74</data>
+      <data key="d2">current</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2022-12-17</data>
+      <data key="d5">dormant</data>
+    </node>
+    <node id="ACC_080">
+      <data key="d0">Leela Menon</data>
+      <data key="d1">56219.64</data>
+      <data key="d2">salary</data>
+      <data key="d3">dormant</data>
+      <data key="d4">2023-05-18</data>
+      <data key="d5">dormant</data>
+    </node>
+    <edge source="ACC_001" target="ACC_002" id="0">
+      <data key="d6">TXN_00351</data>
+      <data key="d7">95000.0</data>
+      <data key="d8">2024-01-01 12:00:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">fraud</data>
+      <data key="d12">circular</data>
+    </edge>
+    <edge source="ACC_001" target="ACC_027" id="0">
+      <data key="d6">TXN_00205</data>
+      <data key="d7">22955.74</data>
+      <data key="d8">2024-01-05 18:10:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_002" target="ACC_003" id="0">
+      <data key="d6">TXN_00352</data>
+      <data key="d7">94950.0</data>
+      <data key="d8">2024-01-01 12:03:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">fraud</data>
+      <data key="d12">circular</data>
+    </edge>
+    <edge source="ACC_002" target="ACC_015" id="0">
+      <data key="d6">TXN_00026</data>
+      <data key="d7">6105.67</data>
+      <data key="d8">2024-01-01 22:48:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_002" target="ACC_007" id="0">
+      <data key="d6">TXN_00153</data>
+      <data key="d7">68340.96</data>
+      <data key="d8">2024-01-04 16:29:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_002" target="ACC_046" id="0">
+      <data key="d6">TXN_00177</data>
+      <data key="d7">59353.86</data>
+      <data key="d8">2024-01-05 04:52:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_002" target="ACC_039" id="0">
+      <data key="d6">TXN_00342</data>
+      <data key="d7">42813.16</data>
+      <data key="d8">2024-01-08 16:17:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_002" target="ACC_034" id="0">
+      <data key="d6">TXN_00350</data>
+      <data key="d7">49199.41</data>
+      <data key="d8">2024-01-08 20:06:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_003" target="ACC_001" id="0">
+      <data key="d6">TXN_00353</data>
+      <data key="d7">94900.0</data>
+      <data key="d8">2024-01-01 12:05:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">fraud</data>
+      <data key="d12">circular</data>
+    </edge>
+    <edge source="ACC_003" target="ACC_049" id="0">
+      <data key="d6">TXN_00063</data>
+      <data key="d7">36034.99</data>
+      <data key="d8">2024-01-02 17:17:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_003" target="ACC_035" id="0">
+      <data key="d6">TXN_00116</data>
+      <data key="d7">43430.4</data>
+      <data key="d8">2024-01-03 21:14:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_003" target="ACC_023" id="0">
+      <data key="d6">TXN_00178</data>
+      <data key="d7">20269.88</data>
+      <data key="d8">2024-01-05 05:01:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_003" target="ACC_059" id="0">
+      <data key="d6">TXN_00209</data>
+      <data key="d7">69126.6</data>
+      <data key="d8">2024-01-05 20:41:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_003" target="ACC_066" id="0">
+      <data key="d6">TXN_00253</data>
+      <data key="d7">43341.04</data>
+      <data key="d8">2024-01-06 19:14:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_003" target="ACC_046" id="0">
+      <data key="d6">TXN_00258</data>
+      <data key="d7">59244.74</data>
+      <data key="d8">2024-01-06 21:15:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_004" target="ACC_023" id="0">
+      <data key="d6">TXN_00031</data>
+      <data key="d7">55374.05</data>
+      <data key="d8">2024-01-02 01:35:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_004" target="ACC_015" id="0">
+      <data key="d6">TXN_00037</data>
+      <data key="d7">65839.36</data>
+      <data key="d8">2024-01-02 05:57:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_004" target="ACC_006" id="0">
+      <data key="d6">TXN_00050</data>
+      <data key="d7">18740.77</data>
+      <data key="d8">2024-01-02 11:33:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_004" target="ACC_011" id="0">
+      <data key="d6">TXN_00068</data>
+      <data key="d7">48384.85</data>
+      <data key="d8">2024-01-02 20:05:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_004" target="ACC_064" id="0">
+      <data key="d6">TXN_00086</data>
+      <data key="d7">63895.99</data>
+      <data key="d8">2024-01-03 06:31:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_004" target="ACC_031" id="0">
+      <data key="d6">TXN_00125</data>
+      <data key="d7">53378.82</data>
+      <data key="d8">2024-01-04 01:24:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_004" target="ACC_035" id="0">
+      <data key="d6">TXN_00195</data>
+      <data key="d7">2657.01</data>
+      <data key="d8">2024-01-05 12:29:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_005" target="ACC_048" id="0">
+      <data key="d6">TXN_00027</data>
+      <data key="d7">43896.96</data>
+      <data key="d8">2024-01-01 22:58:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_005" target="ACC_061" id="0">
+      <data key="d6">TXN_00033</data>
+      <data key="d7">17071.31</data>
+      <data key="d8">2024-01-02 03:13:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_005" target="ACC_008" id="0">
+      <data key="d6">TXN_00221</data>
+      <data key="d7">27970.95</data>
+      <data key="d8">2024-01-06 02:39:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_005" target="ACC_051" id="0">
+      <data key="d6">TXN_00341</data>
+      <data key="d7">59203.07</data>
+      <data key="d8">2024-01-08 16:10:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_011" id="0">
+      <data key="d6">TXN_00014</data>
+      <data key="d7">31732.26</data>
+      <data key="d8">2024-01-01 15:15:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_040" id="0">
+      <data key="d6">TXN_00028</data>
+      <data key="d7">27666.54</data>
+      <data key="d8">2024-01-01 23:58:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_045" id="0">
+      <data key="d6">TXN_00079</data>
+      <data key="d7">40189.52</data>
+      <data key="d8">2024-01-03 02:42:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_007" id="0">
+      <data key="d6">TXN_00098</data>
+      <data key="d7">41725.24</data>
+      <data key="d8">2024-01-03 12:38:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_056" id="0">
+      <data key="d6">TXN_00114</data>
+      <data key="d7">55222.78</data>
+      <data key="d8">2024-01-03 19:31:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_058" id="0">
+      <data key="d6">TXN_00223</data>
+      <data key="d7">68224.22</data>
+      <data key="d8">2024-01-06 03:54:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_041" id="0">
+      <data key="d6">TXN_00262</data>
+      <data key="d7">70036.14</data>
+      <data key="d8">2024-01-06 22:55:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_004" id="0">
+      <data key="d6">TXN_00294</data>
+      <data key="d7">6551.1</data>
+      <data key="d8">2024-01-07 16:30:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_006" target="ACC_005" id="0">
+      <data key="d6">TXN_00314</data>
+      <data key="d7">10709.21</data>
+      <data key="d8">2024-01-08 01:51:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_007" target="ACC_032" id="0">
+      <data key="d6">TXN_00054</data>
+      <data key="d7">68851.52</data>
+      <data key="d8">2024-01-02 13:13:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_007" target="ACC_034" id="0">
+      <data key="d6">TXN_00069</data>
+      <data key="d7">28743.24</data>
+      <data key="d8">2024-01-02 20:19:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_007" target="ACC_020" id="0">
+      <data key="d6">TXN_00102</data>
+      <data key="d7">11615.22</data>
+      <data key="d8">2024-01-03 14:01:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_007" target="ACC_051" id="0">
+      <data key="d6">TXN_00245</data>
+      <data key="d7">37899.53</data>
+      <data key="d8">2024-01-06 14:53:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_007" target="ACC_031" id="0">
+      <data key="d6">TXN_00251</data>
+      <data key="d7">31777.0</data>
+      <data key="d8">2024-01-06 17:56:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_007" target="ACC_038" id="0">
+      <data key="d6">TXN_00302</data>
+      <data key="d7">70931.17</data>
+      <data key="d8">2024-01-07 19:31:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_008" target="ACC_022" id="0">
+      <data key="d6">TXN_00007</data>
+      <data key="d7">28733.5</data>
+      <data key="d8">2024-01-01 11:56:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_008" target="ACC_043" id="0">
+      <data key="d6">TXN_00190</data>
+      <data key="d7">50415.99</data>
+      <data key="d8">2024-01-05 09:35:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_008" target="ACC_046" id="0">
+      <data key="d6">TXN_00220</data>
+      <data key="d7">38296.6</data>
+      <data key="d8">2024-01-06 02:20:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_008" target="ACC_018" id="0">
+      <data key="d6">TXN_00325</data>
+      <data key="d7">39141.9</data>
+      <data key="d8">2024-01-08 07:59:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_009" target="ACC_032" id="0">
+      <data key="d6">TXN_00019</data>
+      <data key="d7">28029.77</data>
+      <data key="d8">2024-01-01 17:51:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_009" target="ACC_027" id="0">
+      <data key="d6">TXN_00174</data>
+      <data key="d7">44185.54</data>
+      <data key="d8">2024-01-05 03:30:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_009" target="ACC_015" id="0">
+      <data key="d6">TXN_00252</data>
+      <data key="d7">62833.24</data>
+      <data key="d8">2024-01-06 18:28:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_009" target="ACC_059" id="0">
+      <data key="d6">TXN_00261</data>
+      <data key="d7">3255.29</data>
+      <data key="d8">2024-01-06 22:22:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_010" target="ACC_011" id="0">
+      <data key="d6">TXN_00354</data>
+      <data key="d7">200000.0</data>
+      <data key="d8">2024-01-01 14:00:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">fraud</data>
+      <data key="d12">rapid_multihop</data>
+    </edge>
+    <edge source="ACC_010" target="ACC_069" id="0">
+      <data key="d6">TXN_00018</data>
+      <data key="d7">16380.0</data>
+      <data key="d8">2024-01-01 17:40:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_010" target="ACC_017" id="0">
+      <data key="d6">TXN_00286</data>
+      <data key="d7">72942.29</data>
+      <data key="d8">2024-01-07 11:02:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_011" target="ACC_012" id="0">
+      <data key="d6">TXN_00355</data>
+      <data key="d7">199000.0</data>
+      <data key="d8">2024-01-01 14:02:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">fraud</data>
+      <data key="d12">rapid_multihop</data>
+    </edge>
+    <edge source="ACC_011" target="ACC_037" id="0">
+      <data key="d6">TXN_00048</data>
+      <data key="d7">38901.17</data>
+      <data key="d8">2024-01-02 10:47:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_011" target="ACC_061" id="0">
+      <data key="d6">TXN_00071</data>
+      <data key="d7">1944.05</data>
+      <data key="d8">2024-01-02 21:48:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_011" target="ACC_043" id="0">
+      <data key="d6">TXN_00140</data>
+      <data key="d7">63999.43</data>
+      <data key="d8">2024-01-04 10:43:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_011" target="ACC_042" id="0">
+      <data key="d6">TXN_00183</data>
+      <data key="d7">45818.16</data>
+      <data key="d8">2024-01-05 07:10:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_011" target="ACC_007" id="0">
+      <data key="d6">TXN_00200</data>
+      <data key="d7">12090.7</data>
+      <data key="d8">2024-01-05 15:29:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_011" target="ACC_035" id="0">
+      <data key="d6">TXN_00201</data>
+      <data key="d7">33511.92</data>
+      <data key="d8">2024-01-05 15:57:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_012" target="ACC_013" id="0">
+      <data key="d6">TXN_00356</data>
+      <data key="d7">198005.0</data>
+      <data key="d8">2024-01-01 14:03:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">fraud</data>
+      <data key="d12">rapid_multihop</data>
+    </edge>
+    <edge source="ACC_012" target="ACC_031" id="0">
+      <data key="d6">TXN_00049</data>
+      <data key="d7">50623.28</data>
+      <data key="d8">2024-01-02 11:02:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_012" target="ACC_030" id="0">
+      <data key="d6">TXN_00115</data>
+      <data key="d7">72162.38</data>
+      <data key="d8">2024-01-03 20:25:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_012" target="ACC_028" id="0">
+      <data key="d6">TXN_00172</data>
+      <data key="d7">48306.98</data>
+      <data key="d8">2024-01-05 01:46:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_012" target="ACC_011" id="0">
+      <data key="d6">TXN_00189</data>
+      <data key="d7">7445.64</data>
+      <data key="d8">2024-01-05 09:08:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_012" target="ACC_065" id="0">
+      <data key="d6">TXN_00222</data>
+      <data key="d7">29143.94</data>
+      <data key="d8">2024-01-06 03:17:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_013" target="ACC_008" id="0">
+      <data key="d6">TXN_00002</data>
+      <data key="d7">30495.29</data>
+      <data key="d8">2024-01-01 09:52:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_013" target="ACC_007" id="0">
+      <data key="d6">TXN_00005</data>
+      <data key="d7">49084.79</data>
+      <data key="d8">2024-01-01 11:00:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_013" target="ACC_014" id="0">
+      <data key="d6">TXN_00357</data>
+      <data key="d7">197014.98</data>
+      <data key="d8">2024-01-01 14:03:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">fraud</data>
+      <data key="d12">rapid_multihop</data>
+    </edge>
+    <edge source="ACC_013" target="ACC_027" id="0">
+      <data key="d6">TXN_00106</data>
+      <data key="d7">47100.87</data>
+      <data key="d8">2024-01-03 15:48:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_013" target="ACC_057" id="0">
+      <data key="d6">TXN_00143</data>
+      <data key="d7">12894.18</data>
+      <data key="d8">2024-01-04 11:54:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_014" target="ACC_015" id="0">
+      <data key="d6">TXN_00358</data>
+      <data key="d7">196029.9</data>
+      <data key="d8">2024-01-01 14:05:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">fraud</data>
+      <data key="d12">rapid_multihop</data>
+    </edge>
+    <edge source="ACC_014" target="ACC_018" id="0">
+      <data key="d6">TXN_00021</data>
+      <data key="d7">20202.71</data>
+      <data key="d8">2024-01-01 19:41:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_014" target="ACC_021" id="0">
+      <data key="d6">TXN_00119</data>
+      <data key="d7">25070.37</data>
+      <data key="d8">2024-01-03 22:38:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_014" target="ACC_058" id="0">
+      <data key="d6">TXN_00180</data>
+      <data key="d7">38035.98</data>
+      <data key="d8">2024-01-05 06:31:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_014" target="ACC_065" id="0">
+      <data key="d6">TXN_00192</data>
+      <data key="d7">16349.04</data>
+      <data key="d8">2024-01-05 10:57:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_014" target="ACC_045" id="0">
+      <data key="d6">TXN_00193</data>
+      <data key="d7">63480.32</data>
+      <data key="d8">2024-01-05 11:21:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_014" target="ACC_067" id="0">
+      <data key="d6">TXN_00242</data>
+      <data key="d7">63911.87</data>
+      <data key="d8">2024-01-06 13:27:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_014" target="ACC_043" id="0">
+      <data key="d6">TXN_00259</data>
+      <data key="d7">10439.01</data>
+      <data key="d8">2024-01-06 21:38:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_015" target="ACC_009" id="0">
+      <data key="d6">TXN_00101</data>
+      <data key="d7">30352.7</data>
+      <data key="d8">2024-01-03 13:24:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_015" target="ACC_009" id="1">
+      <data key="d6">TXN_00179</data>
+      <data key="d7">35980.32</data>
+      <data key="d8">2024-01-05 05:51:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_015" target="ACC_052" id="0">
+      <data key="d6">TXN_00121</data>
+      <data key="d7">64935.84</data>
+      <data key="d8">2024-01-03 23:52:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_015" target="ACC_068" id="0">
+      <data key="d6">TXN_00215</data>
+      <data key="d7">38491.43</data>
+      <data key="d8">2024-01-05 23:31:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_015" target="ACC_004" id="0">
+      <data key="d6">TXN_00277</data>
+      <data key="d7">55307.78</data>
+      <data key="d8">2024-01-07 06:34:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_015" target="ACC_054" id="0">
+      <data key="d6">TXN_00319</data>
+      <data key="d7">43985.81</data>
+      <data key="d8">2024-01-08 04:54:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_015" target="ACC_025" id="0">
+      <data key="d6">TXN_00323</data>
+      <data key="d7">1910.83</data>
+      <data key="d8">2024-01-08 06:33:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_016" target="ACC_020" id="0">
+      <data key="d6">TXN_00127</data>
+      <data key="d7">37628.98</data>
+      <data key="d8">2024-01-04 03:04:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_016" target="ACC_059" id="0">
+      <data key="d6">TXN_00162</data>
+      <data key="d7">27959.63</data>
+      <data key="d8">2024-01-04 20:45:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_016" target="ACC_034" id="0">
+      <data key="d6">TXN_00278</data>
+      <data key="d7">58234.85</data>
+      <data key="d8">2024-01-07 07:20:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_016" target="ACC_070" id="0">
+      <data key="d6">TXN_00331</data>
+      <data key="d7">28787.22</data>
+      <data key="d8">2024-01-08 11:07:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_017" target="ACC_061" id="0">
+      <data key="d6">TXN_00074</data>
+      <data key="d7">50374.68</data>
+      <data key="d8">2024-01-02 23:47:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_017" target="ACC_037" id="0">
+      <data key="d6">TXN_00124</data>
+      <data key="d7">33139.65</data>
+      <data key="d8">2024-01-04 01:04:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_017" target="ACC_049" id="0">
+      <data key="d6">TXN_00207</data>
+      <data key="d7">40177.38</data>
+      <data key="d8">2024-01-05 18:57:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_017" target="ACC_048" id="0">
+      <data key="d6">TXN_00300</data>
+      <data key="d7">38866.02</data>
+      <data key="d8">2024-01-07 18:19:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_017" target="ACC_013" id="0">
+      <data key="d6">TXN_00312</data>
+      <data key="d7">29845.83</data>
+      <data key="d8">2024-01-08 00:56:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_018" target="ACC_009" id="0">
+      <data key="d6">TXN_00130</data>
+      <data key="d7">21080.43</data>
+      <data key="d8">2024-01-04 05:05:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_018" target="ACC_013" id="0">
+      <data key="d6">TXN_00155</data>
+      <data key="d7">67803.58</data>
+      <data key="d8">2024-01-04 17:24:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_018" target="ACC_020" id="0">
+      <data key="d6">TXN_00234</data>
+      <data key="d7">6248.8</data>
+      <data key="d8">2024-01-06 09:17:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_018" target="ACC_033" id="0">
+      <data key="d6">TXN_00241</data>
+      <data key="d7">4387.4</data>
+      <data key="d8">2024-01-06 13:08:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_018" target="ACC_061" id="0">
+      <data key="d6">TXN_00248</data>
+      <data key="d7">33920.81</data>
+      <data key="d8">2024-01-06 16:13:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_018" target="ACC_068" id="0">
+      <data key="d6">TXN_00276</data>
+      <data key="d7">27837.77</data>
+      <data key="d8">2024-01-07 06:02:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_018" target="ACC_001" id="0">
+      <data key="d6">TXN_00337</data>
+      <data key="d7">72356.65</data>
+      <data key="d8">2024-01-08 14:51:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_018" target="ACC_062" id="0">
+      <data key="d6">TXN_00348</data>
+      <data key="d7">24608.32</data>
+      <data key="d8">2024-01-08 19:03:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_019" target="ACC_010" id="0">
+      <data key="d6">TXN_00111</data>
+      <data key="d7">4943.03</data>
+      <data key="d8">2024-01-03 17:35:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_019" target="ACC_050" id="0">
+      <data key="d6">TXN_00129</data>
+      <data key="d7">14700.47</data>
+      <data key="d8">2024-01-04 04:14:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_019" target="ACC_001" id="0">
+      <data key="d6">TXN_00175</data>
+      <data key="d7">21156.98</data>
+      <data key="d8">2024-01-05 03:40:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_019" target="ACC_031" id="0">
+      <data key="d6">TXN_00216</data>
+      <data key="d7">8158.94</data>
+      <data key="d8">2024-01-05 23:48:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_019" target="ACC_057" id="0">
+      <data key="d6">TXN_00273</data>
+      <data key="d7">3092.52</data>
+      <data key="d8">2024-01-07 04:49:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_019" target="ACC_041" id="0">
+      <data key="d6">TXN_00299</data>
+      <data key="d7">64680.64</data>
+      <data key="d8">2024-01-07 18:12:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_021" id="0">
+      <data key="d6">TXN_00359</data>
+      <data key="d7">48782.41</data>
+      <data key="d8">2024-01-01 16:02:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">fraud</data>
+      <data key="d12">structuring</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_022" id="0">
+      <data key="d6">TXN_00360</data>
+      <data key="d7">48386.73</data>
+      <data key="d8">2024-01-01 16:16:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">fraud</data>
+      <data key="d12">structuring</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_022" id="1">
+      <data key="d6">TXN_00293</data>
+      <data key="d7">49575.6</data>
+      <data key="d8">2024-01-07 15:48:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_023" id="0">
+      <data key="d6">TXN_00361</data>
+      <data key="d7">49867.63</data>
+      <data key="d8">2024-01-01 16:35:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">fraud</data>
+      <data key="d12">structuring</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_024" id="0">
+      <data key="d6">TXN_00362</data>
+      <data key="d7">49035.63</data>
+      <data key="d8">2024-01-01 16:48:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">fraud</data>
+      <data key="d12">structuring</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_025" id="0">
+      <data key="d6">TXN_00363</data>
+      <data key="d7">49325.79</data>
+      <data key="d8">2024-01-01 17:04:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">fraud</data>
+      <data key="d12">structuring</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_026" id="0">
+      <data key="d6">TXN_00364</data>
+      <data key="d7">48972.99</data>
+      <data key="d8">2024-01-01 17:16:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">fraud</data>
+      <data key="d12">structuring</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_035" id="0">
+      <data key="d6">TXN_00022</data>
+      <data key="d7">21490.84</data>
+      <data key="d8">2024-01-01 19:55:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_031" id="0">
+      <data key="d6">TXN_00030</data>
+      <data key="d7">64913.12</data>
+      <data key="d8">2024-01-02 01:13:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_030" id="0">
+      <data key="d6">TXN_00060</data>
+      <data key="d7">29036.13</data>
+      <data key="d8">2024-01-02 15:34:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_056" id="0">
+      <data key="d6">TXN_00082</data>
+      <data key="d7">13622.2</data>
+      <data key="d8">2024-01-03 04:37:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_064" id="0">
+      <data key="d6">TXN_00136</data>
+      <data key="d7">72379.42</data>
+      <data key="d8">2024-01-04 08:07:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_054" id="0">
+      <data key="d6">TXN_00168</data>
+      <data key="d7">49291.68</data>
+      <data key="d8">2024-01-05 00:23:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_020" target="ACC_010" id="0">
+      <data key="d6">TXN_00217</data>
+      <data key="d7">13697.39</data>
+      <data key="d8">2024-01-06 00:38:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_023" target="ACC_039" id="0">
+      <data key="d6">TXN_00097</data>
+      <data key="d7">1554.05</data>
+      <data key="d8">2024-01-03 11:53:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_023" target="ACC_011" id="0">
+      <data key="d6">TXN_00146</data>
+      <data key="d7">45907.14</data>
+      <data key="d8">2024-01-04 13:27:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_023" target="ACC_060" id="0">
+      <data key="d6">TXN_00260</data>
+      <data key="d7">73571.03</data>
+      <data key="d8">2024-01-06 22:09:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_023" target="ACC_057" id="0">
+      <data key="d6">TXN_00280</data>
+      <data key="d7">74796.05</data>
+      <data key="d8">2024-01-07 08:21:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_023" target="ACC_047" id="0">
+      <data key="d6">TXN_00282</data>
+      <data key="d7">38402.3</data>
+      <data key="d8">2024-01-07 08:48:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_024" target="ACC_011" id="0">
+      <data key="d6">TXN_00255</data>
+      <data key="d7">39499.6</data>
+      <data key="d8">2024-01-06 19:54:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_024" target="ACC_070" id="0">
+      <data key="d6">TXN_00268</data>
+      <data key="d7">22385.6</data>
+      <data key="d8">2024-01-07 01:32:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_024" target="ACC_017" id="0">
+      <data key="d6">TXN_00288</data>
+      <data key="d7">32730.06</data>
+      <data key="d8">2024-01-07 12:58:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_025" target="ACC_069" id="0">
+      <data key="d6">TXN_00003</data>
+      <data key="d7">33921.71</data>
+      <data key="d8">2024-01-01 10:20:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_025" target="ACC_033" id="0">
+      <data key="d6">TXN_00040</data>
+      <data key="d7">3806.8</data>
+      <data key="d8">2024-01-02 07:26:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_025" target="ACC_054" id="0">
+      <data key="d6">TXN_00044</data>
+      <data key="d7">50037.24</data>
+      <data key="d8">2024-01-02 08:35:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_025" target="ACC_041" id="0">
+      <data key="d6">TXN_00094</data>
+      <data key="d7">9406.83</data>
+      <data key="d8">2024-01-03 10:21:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_025" target="ACC_048" id="0">
+      <data key="d6">TXN_00239</data>
+      <data key="d7">51033.86</data>
+      <data key="d8">2024-01-06 12:10:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_025" target="ACC_047" id="0">
+      <data key="d6">TXN_00310</data>
+      <data key="d7">41715.11</data>
+      <data key="d8">2024-01-07 23:25:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_025" target="ACC_023" id="0">
+      <data key="d6">TXN_00346</data>
+      <data key="d7">46016.11</data>
+      <data key="d8">2024-01-08 18:04:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_026" target="ACC_055" id="0">
+      <data key="d6">TXN_00110</data>
+      <data key="d7">9050.83</data>
+      <data key="d8">2024-01-03 16:44:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_027" target="ACC_032" id="0">
+      <data key="d6">TXN_00029</data>
+      <data key="d7">50186.54</data>
+      <data key="d8">2024-01-02 00:21:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_027" target="ACC_056" id="0">
+      <data key="d6">TXN_00046</data>
+      <data key="d7">59039.03</data>
+      <data key="d8">2024-01-02 09:15:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_027" target="ACC_054" id="0">
+      <data key="d6">TXN_00062</data>
+      <data key="d7">29516.02</data>
+      <data key="d8">2024-01-02 16:54:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_027" target="ACC_054" id="1">
+      <data key="d6">TXN_00295</data>
+      <data key="d7">46549.08</data>
+      <data key="d8">2024-01-07 16:32:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_028" target="ACC_062" id="0">
+      <data key="d6">TXN_00095</data>
+      <data key="d7">21099.22</data>
+      <data key="d8">2024-01-03 10:59:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_028" target="ACC_056" id="0">
+      <data key="d6">TXN_00186</data>
+      <data key="d7">34140.84</data>
+      <data key="d8">2024-01-05 08:44:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_028" target="ACC_044" id="0">
+      <data key="d6">TXN_00233</data>
+      <data key="d7">71101.29</data>
+      <data key="d8">2024-01-06 08:22:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_029" target="ACC_009" id="0">
+      <data key="d6">TXN_00072</data>
+      <data key="d7">58701.86</data>
+      <data key="d8">2024-01-02 22:30:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_029" target="ACC_067" id="0">
+      <data key="d6">TXN_00104</data>
+      <data key="d7">28838.16</data>
+      <data key="d8">2024-01-03 15:27:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_029" target="ACC_055" id="0">
+      <data key="d6">TXN_00194</data>
+      <data key="d7">63464.06</data>
+      <data key="d8">2024-01-05 12:11:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_029" target="ACC_058" id="0">
+      <data key="d6">TXN_00244</data>
+      <data key="d7">66404.92</data>
+      <data key="d8">2024-01-06 14:37:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_029" target="ACC_045" id="0">
+      <data key="d6">TXN_00290</data>
+      <data key="d7">71087.49</data>
+      <data key="d8">2024-01-07 13:43:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_029" target="ACC_039" id="0">
+      <data key="d6">TXN_00329</data>
+      <data key="d7">57952.48</data>
+      <data key="d8">2024-01-08 10:05:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_030" target="ACC_071" id="0">
+      <data key="d6">TXN_00365</data>
+      <data key="d7">500000.0</data>
+      <data key="d8">2024-01-01 19:00:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">fraud</data>
+      <data key="d12">dormant_activation</data>
+    </edge>
+    <edge source="ACC_030" target="ACC_046" id="0">
+      <data key="d6">TXN_00154</data>
+      <data key="d7">16815.84</data>
+      <data key="d8">2024-01-04 16:42:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_030" target="ACC_007" id="0">
+      <data key="d6">TXN_00321</data>
+      <data key="d7">43972.48</data>
+      <data key="d8">2024-01-08 05:56:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_030" target="ACC_007" id="1">
+      <data key="d6">TXN_00336</data>
+      <data key="d7">7964.75</data>
+      <data key="d8">2024-01-08 13:51:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_031" target="ACC_022" id="0">
+      <data key="d6">TXN_00006</data>
+      <data key="d7">30777.85</data>
+      <data key="d8">2024-01-01 11:31:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_031" target="ACC_052" id="0">
+      <data key="d6">TXN_00013</data>
+      <data key="d7">9431.55</data>
+      <data key="d8">2024-01-01 14:37:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_031" target="ACC_023" id="0">
+      <data key="d6">TXN_00107</data>
+      <data key="d7">41623.42</data>
+      <data key="d8">2024-01-03 15:59:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_031" target="ACC_050" id="0">
+      <data key="d6">TXN_00134</data>
+      <data key="d7">17900.4</data>
+      <data key="d8">2024-01-04 07:06:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_031" target="ACC_037" id="0">
+      <data key="d6">TXN_00142</data>
+      <data key="d7">74808.23</data>
+      <data key="d8">2024-01-04 11:34:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_031" target="ACC_064" id="0">
+      <data key="d6">TXN_00147</data>
+      <data key="d7">68505.76</data>
+      <data key="d8">2024-01-04 13:37:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_031" target="ACC_064" id="1">
+      <data key="d6">TXN_00283</data>
+      <data key="d7">2458.16</data>
+      <data key="d8">2024-01-07 09:24:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_032" target="ACC_035" id="0">
+      <data key="d6">TXN_00032</data>
+      <data key="d7">12360.24</data>
+      <data key="d8">2024-01-02 02:20:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_032" target="ACC_026" id="0">
+      <data key="d6">TXN_00073</data>
+      <data key="d7">63022.55</data>
+      <data key="d8">2024-01-02 23:10:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_032" target="ACC_014" id="0">
+      <data key="d6">TXN_00078</data>
+      <data key="d7">52440.88</data>
+      <data key="d8">2024-01-03 01:59:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_032" target="ACC_060" id="0">
+      <data key="d6">TXN_00085</data>
+      <data key="d7">42953.8</data>
+      <data key="d8">2024-01-03 06:19:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_032" target="ACC_016" id="0">
+      <data key="d6">TXN_00103</data>
+      <data key="d7">42076.44</data>
+      <data key="d8">2024-01-03 14:28:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_032" target="ACC_068" id="0">
+      <data key="d6">TXN_00145</data>
+      <data key="d7">31197.86</data>
+      <data key="d8">2024-01-04 13:02:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_032" target="ACC_021" id="0">
+      <data key="d6">TXN_00303</data>
+      <data key="d7">61104.1</data>
+      <data key="d8">2024-01-07 20:31:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_032" target="ACC_007" id="0">
+      <data key="d6">TXN_00335</data>
+      <data key="d7">50402.63</data>
+      <data key="d8">2024-01-08 13:29:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_033" target="ACC_048" id="0">
+      <data key="d6">TXN_00075</data>
+      <data key="d7">13000.29</data>
+      <data key="d8">2024-01-03 00:26:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_033" target="ACC_059" id="0">
+      <data key="d6">TXN_00148</data>
+      <data key="d7">19521.84</data>
+      <data key="d8">2024-01-04 13:38:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_033" target="ACC_062" id="0">
+      <data key="d6">TXN_00159</data>
+      <data key="d7">72570.11</data>
+      <data key="d8">2024-01-04 19:41:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_033" target="ACC_023" id="0">
+      <data key="d6">TXN_00176</data>
+      <data key="d7">8689.51</data>
+      <data key="d8">2024-01-05 04:36:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_033" target="ACC_020" id="0">
+      <data key="d6">TXN_00229</data>
+      <data key="d7">25335.47</data>
+      <data key="d8">2024-01-06 05:57:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_033" target="ACC_028" id="0">
+      <data key="d6">TXN_00249</data>
+      <data key="d7">62704.75</data>
+      <data key="d8">2024-01-06 16:49:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_033" target="ACC_026" id="0">
+      <data key="d6">TXN_00291</data>
+      <data key="d7">47811.75</data>
+      <data key="d8">2024-01-07 14:19:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_034" target="ACC_051" id="0">
+      <data key="d6">TXN_00016</data>
+      <data key="d7">10250.43</data>
+      <data key="d8">2024-01-01 16:43:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_034" target="ACC_065" id="0">
+      <data key="d6">TXN_00023</data>
+      <data key="d7">36895.62</data>
+      <data key="d8">2024-01-01 20:53:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_034" target="ACC_021" id="0">
+      <data key="d6">TXN_00025</data>
+      <data key="d7">55721.7</data>
+      <data key="d8">2024-01-01 21:51:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_034" target="ACC_005" id="0">
+      <data key="d6">TXN_00038</data>
+      <data key="d7">8575.99</data>
+      <data key="d8">2024-01-02 06:25:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_035" target="ACC_043" id="0">
+      <data key="d6">TXN_00059</data>
+      <data key="d7">24318.36</data>
+      <data key="d8">2024-01-02 15:24:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_035" target="ACC_054" id="0">
+      <data key="d6">TXN_00128</data>
+      <data key="d7">62686.93</data>
+      <data key="d8">2024-01-04 03:35:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_035" target="ACC_058" id="0">
+      <data key="d6">TXN_00243</data>
+      <data key="d7">67945.31</data>
+      <data key="d8">2024-01-06 13:37:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_035" target="ACC_011" id="0">
+      <data key="d6">TXN_00267</data>
+      <data key="d7">54667.56</data>
+      <data key="d8">2024-01-07 01:25:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_035" target="ACC_018" id="0">
+      <data key="d6">TXN_00334</data>
+      <data key="d7">8637.38</data>
+      <data key="d8">2024-01-08 12:55:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_036" target="ACC_002" id="0">
+      <data key="d6">TXN_00088</data>
+      <data key="d7">38988.73</data>
+      <data key="d8">2024-01-03 07:41:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_055" id="0">
+      <data key="d6">TXN_00008</data>
+      <data key="d7">52396.07</data>
+      <data key="d8">2024-01-01 12:43:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_013" id="0">
+      <data key="d6">TXN_00096</data>
+      <data key="d7">62530.81</data>
+      <data key="d8">2024-01-03 11:18:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_059" id="0">
+      <data key="d6">TXN_00109</data>
+      <data key="d7">5802.89</data>
+      <data key="d8">2024-01-03 16:29:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_057" id="0">
+      <data key="d6">TXN_00112</data>
+      <data key="d7">9764.35</data>
+      <data key="d8">2024-01-03 18:20:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_050" id="0">
+      <data key="d6">TXN_00227</data>
+      <data key="d7">30953.32</data>
+      <data key="d8">2024-01-06 04:43:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_058" id="0">
+      <data key="d6">TXN_00238</data>
+      <data key="d7">17933.22</data>
+      <data key="d8">2024-01-06 11:33:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_049" id="0">
+      <data key="d6">TXN_00240</data>
+      <data key="d7">37966.55</data>
+      <data key="d8">2024-01-06 12:37:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_063" id="0">
+      <data key="d6">TXN_00279</data>
+      <data key="d7">15413.29</data>
+      <data key="d8">2024-01-07 07:29:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_064" id="0">
+      <data key="d6">TXN_00307</data>
+      <data key="d7">45015.15</data>
+      <data key="d8">2024-01-07 22:26:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_037" target="ACC_008" id="0">
+      <data key="d6">TXN_00339</data>
+      <data key="d7">68141.3</data>
+      <data key="d8">2024-01-08 15:46:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_038" target="ACC_003" id="0">
+      <data key="d6">TXN_00152</data>
+      <data key="d7">73356.86</data>
+      <data key="d8">2024-01-04 15:41:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_038" target="ACC_042" id="0">
+      <data key="d6">TXN_00157</data>
+      <data key="d7">56187.32</data>
+      <data key="d8">2024-01-04 18:23:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_038" target="ACC_042" id="1">
+      <data key="d6">TXN_00206</data>
+      <data key="d7">9438.83</data>
+      <data key="d8">2024-01-05 18:42:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_038" target="ACC_040" id="0">
+      <data key="d6">TXN_00269</data>
+      <data key="d7">33720.72</data>
+      <data key="d8">2024-01-07 02:18:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_038" target="ACC_006" id="0">
+      <data key="d6">TXN_00332</data>
+      <data key="d7">21928.46</data>
+      <data key="d8">2024-01-08 11:53:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_039" target="ACC_068" id="0">
+      <data key="d6">TXN_00020</data>
+      <data key="d7">1082.82</data>
+      <data key="d8">2024-01-01 18:44:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_039" target="ACC_052" id="0">
+      <data key="d6">TXN_00045</data>
+      <data key="d7">41321.32</data>
+      <data key="d8">2024-01-02 08:36:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_039" target="ACC_053" id="0">
+      <data key="d6">TXN_00165</data>
+      <data key="d7">9192.36</data>
+      <data key="d8">2024-01-04 21:44:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_039" target="ACC_069" id="0">
+      <data key="d6">TXN_00292</data>
+      <data key="d7">7460.42</data>
+      <data key="d8">2024-01-07 15:01:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_039" target="ACC_061" id="0">
+      <data key="d6">TXN_00318</data>
+      <data key="d7">61273.29</data>
+      <data key="d8">2024-01-08 04:03:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_040" target="ACC_030" id="0">
+      <data key="d6">TXN_00034</data>
+      <data key="d7">17107.8</data>
+      <data key="d8">2024-01-02 03:56:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_040" target="ACC_014" id="0">
+      <data key="d6">TXN_00076</data>
+      <data key="d7">43612.01</data>
+      <data key="d8">2024-01-03 01:26:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_040" target="ACC_051" id="0">
+      <data key="d6">TXN_00230</data>
+      <data key="d7">10106.9</data>
+      <data key="d8">2024-01-06 06:43:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_034" id="0">
+      <data key="d6">TXN_00015</data>
+      <data key="d7">15717.31</data>
+      <data key="d8">2024-01-01 16:01:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_010" id="0">
+      <data key="d6">TXN_00017</data>
+      <data key="d7">1194.0</data>
+      <data key="d8">2024-01-01 17:23:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_056" id="0">
+      <data key="d6">TXN_00039</data>
+      <data key="d7">45662.56</data>
+      <data key="d8">2024-01-02 06:58:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_016" id="0">
+      <data key="d6">TXN_00042</data>
+      <data key="d7">54121.69</data>
+      <data key="d8">2024-01-02 07:51:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_061" id="0">
+      <data key="d6">TXN_00135</data>
+      <data key="d7">53039.48</data>
+      <data key="d8">2024-01-04 07:58:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_063" id="0">
+      <data key="d6">TXN_00141</data>
+      <data key="d7">65492.53</data>
+      <data key="d8">2024-01-04 10:46:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_033" id="0">
+      <data key="d6">TXN_00188</data>
+      <data key="d7">28385.43</data>
+      <data key="d8">2024-01-05 09:01:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_025" id="0">
+      <data key="d6">TXN_00304</data>
+      <data key="d7">57352.54</data>
+      <data key="d8">2024-01-07 21:03:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_041" target="ACC_021" id="0">
+      <data key="d6">TXN_00316</data>
+      <data key="d7">29775.12</data>
+      <data key="d8">2024-01-08 03:04:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_042" target="ACC_032" id="0">
+      <data key="d6">TXN_00084</data>
+      <data key="d7">62389.46</data>
+      <data key="d8">2024-01-03 05:36:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_042" target="ACC_008" id="0">
+      <data key="d6">TXN_00144</data>
+      <data key="d7">22355.9</data>
+      <data key="d8">2024-01-04 12:18:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_042" target="ACC_029" id="0">
+      <data key="d6">TXN_00164</data>
+      <data key="d7">48750.1</data>
+      <data key="d8">2024-01-04 21:41:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_042" target="ACC_049" id="0">
+      <data key="d6">TXN_00184</data>
+      <data key="d7">74599.77</data>
+      <data key="d8">2024-01-05 07:44:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_043" target="ACC_036" id="0">
+      <data key="d6">TXN_00035</data>
+      <data key="d7">64894.29</data>
+      <data key="d8">2024-01-02 04:46:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_043" target="ACC_013" id="0">
+      <data key="d6">TXN_00137</data>
+      <data key="d7">65627.18</data>
+      <data key="d8">2024-01-04 08:36:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_043" target="ACC_032" id="0">
+      <data key="d6">TXN_00173</data>
+      <data key="d7">74167.16</data>
+      <data key="d8">2024-01-05 02:37:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_043" target="ACC_009" id="0">
+      <data key="d6">TXN_00228</data>
+      <data key="d7">25061.96</data>
+      <data key="d8">2024-01-06 05:19:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_043" target="ACC_019" id="0">
+      <data key="d6">TXN_00247</data>
+      <data key="d7">10751.17</data>
+      <data key="d8">2024-01-06 16:12:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_044" target="ACC_052" id="0">
+      <data key="d6">TXN_00066</data>
+      <data key="d7">54451.51</data>
+      <data key="d8">2024-01-02 19:18:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_044" target="ACC_049" id="0">
+      <data key="d6">TXN_00070</data>
+      <data key="d7">21230.12</data>
+      <data key="d8">2024-01-02 21:13:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_044" target="ACC_029" id="0">
+      <data key="d6">TXN_00214</data>
+      <data key="d7">25313.61</data>
+      <data key="d8">2024-01-05 22:33:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_044" target="ACC_011" id="0">
+      <data key="d6">TXN_00225</data>
+      <data key="d7">38088.9</data>
+      <data key="d8">2024-01-06 04:10:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_044" target="ACC_024" id="0">
+      <data key="d6">TXN_00266</data>
+      <data key="d7">37467.14</data>
+      <data key="d8">2024-01-07 01:19:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_044" target="ACC_065" id="0">
+      <data key="d6">TXN_00317</data>
+      <data key="d7">62207.56</data>
+      <data key="d8">2024-01-08 03:39:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_044" target="ACC_070" id="0">
+      <data key="d6">TXN_00327</data>
+      <data key="d7">26894.38</data>
+      <data key="d8">2024-01-08 09:01:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_045" target="ACC_001" id="0">
+      <data key="d6">TXN_00196</data>
+      <data key="d7">14014.71</data>
+      <data key="d8">2024-01-05 12:39:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_045" target="ACC_056" id="0">
+      <data key="d6">TXN_00203</data>
+      <data key="d7">8761.29</data>
+      <data key="d8">2024-01-05 17:30:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_045" target="ACC_009" id="0">
+      <data key="d6">TXN_00281</data>
+      <data key="d7">41474.79</data>
+      <data key="d8">2024-01-07 08:40:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_046" target="ACC_034" id="0">
+      <data key="d6">TXN_00087</data>
+      <data key="d7">25855.24</data>
+      <data key="d8">2024-01-03 07:28:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_046" target="ACC_059" id="0">
+      <data key="d6">TXN_00093</data>
+      <data key="d7">20683.27</data>
+      <data key="d8">2024-01-03 09:46:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_046" target="ACC_008" id="0">
+      <data key="d6">TXN_00171</data>
+      <data key="d7">30161.4</data>
+      <data key="d8">2024-01-05 01:07:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_046" target="ACC_010" id="0">
+      <data key="d6">TXN_00208</data>
+      <data key="d7">30081.8</data>
+      <data key="d8">2024-01-05 19:45:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_046" target="ACC_007" id="0">
+      <data key="d6">TXN_00264</data>
+      <data key="d7">65001.97</data>
+      <data key="d8">2024-01-06 23:59:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_047" target="ACC_012" id="0">
+      <data key="d6">TXN_00161</data>
+      <data key="d7">59405.81</data>
+      <data key="d8">2024-01-04 19:57:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_047" target="ACC_012" id="1">
+      <data key="d6">TXN_00212</data>
+      <data key="d7">33035.03</data>
+      <data key="d8">2024-01-05 21:26:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_047" target="ACC_050" id="0">
+      <data key="d6">TXN_00274</data>
+      <data key="d7">71235.3</data>
+      <data key="d8">2024-01-07 04:52:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_047" target="ACC_052" id="0">
+      <data key="d6">TXN_00309</data>
+      <data key="d7">27762.33</data>
+      <data key="d8">2024-01-07 23:20:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_047" target="ACC_019" id="0">
+      <data key="d6">TXN_00313</data>
+      <data key="d7">15329.81</data>
+      <data key="d8">2024-01-08 01:29:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_048" target="ACC_040" id="0">
+      <data key="d6">TXN_00199</data>
+      <data key="d7">54258.9</data>
+      <data key="d8">2024-01-05 14:40:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_048" target="ACC_029" id="0">
+      <data key="d6">TXN_00246</data>
+      <data key="d7">2599.97</data>
+      <data key="d8">2024-01-06 15:53:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_048" target="ACC_056" id="0">
+      <data key="d6">TXN_00265</data>
+      <data key="d7">66766.75</data>
+      <data key="d8">2024-01-07 00:47:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_049" target="ACC_051" id="0">
+      <data key="d6">TXN_00077</data>
+      <data key="d7">70639.56</data>
+      <data key="d8">2024-01-03 01:39:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_049" target="ACC_048" id="0">
+      <data key="d6">TXN_00163</data>
+      <data key="d7">8571.78</data>
+      <data key="d8">2024-01-04 21:00:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_049" target="ACC_043" id="0">
+      <data key="d6">TXN_00231</data>
+      <data key="d7">61082.27</data>
+      <data key="d8">2024-01-06 07:26:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_049" target="ACC_020" id="0">
+      <data key="d6">TXN_00236</data>
+      <data key="d7">12587.42</data>
+      <data key="d8">2024-01-06 10:33:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_049" target="ACC_019" id="0">
+      <data key="d6">TXN_00322</data>
+      <data key="d7">61713.77</data>
+      <data key="d8">2024-01-08 06:12:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_050" target="ACC_064" id="0">
+      <data key="d6">TXN_00052</data>
+      <data key="d7">30274.14</data>
+      <data key="d8">2024-01-02 12:20:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_050" target="ACC_059" id="0">
+      <data key="d6">TXN_00167</data>
+      <data key="d7">28140.36</data>
+      <data key="d8">2024-01-04 23:29:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_050" target="ACC_061" id="0">
+      <data key="d6">TXN_00257</data>
+      <data key="d7">3743.31</data>
+      <data key="d8">2024-01-06 20:52:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_050" target="ACC_031" id="0">
+      <data key="d6">TXN_00349</data>
+      <data key="d7">33781.8</data>
+      <data key="d8">2024-01-08 19:21:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_051" target="ACC_062" id="0">
+      <data key="d6">TXN_00285</data>
+      <data key="d7">39664.33</data>
+      <data key="d8">2024-01-07 10:20:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_032" id="0">
+      <data key="d6">TXN_00091</data>
+      <data key="d7">23312.35</data>
+      <data key="d8">2024-01-03 08:41:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_035" id="0">
+      <data key="d6">TXN_00113</data>
+      <data key="d7">37785.18</data>
+      <data key="d8">2024-01-03 18:52:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_005" id="0">
+      <data key="d6">TXN_00120</data>
+      <data key="d7">34384.53</data>
+      <data key="d8">2024-01-03 22:59:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_055" id="0">
+      <data key="d6">TXN_00182</data>
+      <data key="d7">51614.26</data>
+      <data key="d8">2024-01-05 07:05:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_009" id="0">
+      <data key="d6">TXN_00197</data>
+      <data key="d7">11069.66</data>
+      <data key="d8">2024-01-05 13:20:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_003" id="0">
+      <data key="d6">TXN_00211</data>
+      <data key="d7">72481.88</data>
+      <data key="d8">2024-01-05 21:19:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_068" id="0">
+      <data key="d6">TXN_00213</data>
+      <data key="d7">6359.21</data>
+      <data key="d8">2024-01-05 22:22:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_047" id="0">
+      <data key="d6">TXN_00272</data>
+      <data key="d7">38724.91</data>
+      <data key="d8">2024-01-07 04:44:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_052" target="ACC_039" id="0">
+      <data key="d6">TXN_00297</data>
+      <data key="d7">34289.04</data>
+      <data key="d8">2024-01-07 17:37:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_053" target="ACC_042" id="0">
+      <data key="d6">TXN_00043</data>
+      <data key="d7">30478.83</data>
+      <data key="d8">2024-01-02 08:10:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_053" target="ACC_063" id="0">
+      <data key="d6">TXN_00089</data>
+      <data key="d7">41860.63</data>
+      <data key="d8">2024-01-03 07:57:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_053" target="ACC_012" id="0">
+      <data key="d6">TXN_00126</data>
+      <data key="d7">17240.2</data>
+      <data key="d8">2024-01-04 02:18:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_053" target="ACC_036" id="0">
+      <data key="d6">TXN_00169</data>
+      <data key="d7">2937.36</data>
+      <data key="d8">2024-01-05 00:47:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_053" target="ACC_027" id="0">
+      <data key="d6">TXN_00324</data>
+      <data key="d7">31073.12</data>
+      <data key="d8">2024-01-08 07:23:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_054" target="ACC_053" id="0">
+      <data key="d6">TXN_00061</data>
+      <data key="d7">25150.66</data>
+      <data key="d8">2024-01-02 16:04:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_054" target="ACC_069" id="0">
+      <data key="d6">TXN_00064</data>
+      <data key="d7">56189.92</data>
+      <data key="d8">2024-01-02 17:52:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_036" id="0">
+      <data key="d6">TXN_00024</data>
+      <data key="d7">3784.46</data>
+      <data key="d8">2024-01-01 21:15:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_029" id="0">
+      <data key="d6">TXN_00053</data>
+      <data key="d7">13603.56</data>
+      <data key="d8">2024-01-02 13:05:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_040" id="0">
+      <data key="d6">TXN_00105</data>
+      <data key="d7">42862.9</data>
+      <data key="d8">2024-01-03 15:31:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_033" id="0">
+      <data key="d6">TXN_00150</data>
+      <data key="d7">34534.27</data>
+      <data key="d8">2024-01-04 14:21:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_007" id="0">
+      <data key="d6">TXN_00191</data>
+      <data key="d7">72645.7</data>
+      <data key="d8">2024-01-05 10:14:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_052" id="0">
+      <data key="d6">TXN_00210</data>
+      <data key="d7">53357.67</data>
+      <data key="d8">2024-01-05 21:08:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_066" id="0">
+      <data key="d6">TXN_00232</data>
+      <data key="d7">27456.19</data>
+      <data key="d8">2024-01-06 07:50:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_015" id="0">
+      <data key="d6">TXN_00250</data>
+      <data key="d7">58324.86</data>
+      <data key="d8">2024-01-06 17:05:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_055" target="ACC_001" id="0">
+      <data key="d6">TXN_00254</data>
+      <data key="d7">46303.31</data>
+      <data key="d8">2024-01-06 19:30:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_056" target="ACC_046" id="0">
+      <data key="d6">TXN_00001</data>
+      <data key="d7">32056.61</data>
+      <data key="d8">2024-01-01 09:30:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_056" target="ACC_047" id="0">
+      <data key="d6">TXN_00081</data>
+      <data key="d7">47851.09</data>
+      <data key="d8">2024-01-03 04:03:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_056" target="ACC_036" id="0">
+      <data key="d6">TXN_00271</data>
+      <data key="d7">48140.46</data>
+      <data key="d8">2024-01-07 03:56:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_028" id="0">
+      <data key="d6">TXN_00047</data>
+      <data key="d7">38582.46</data>
+      <data key="d8">2024-01-02 10:06:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_005" id="0">
+      <data key="d6">TXN_00156</data>
+      <data key="d7">43678.25</data>
+      <data key="d8">2024-01-04 18:11:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_031" id="0">
+      <data key="d6">TXN_00170</data>
+      <data key="d7">64231.04</data>
+      <data key="d8">2024-01-05 00:54:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_054" id="0">
+      <data key="d6">TXN_00202</data>
+      <data key="d7">20850.93</data>
+      <data key="d8">2024-01-05 16:46:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_054" id="1">
+      <data key="d6">TXN_00298</data>
+      <data key="d7">36576.71</data>
+      <data key="d8">2024-01-07 17:51:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_009" id="0">
+      <data key="d6">TXN_00219</data>
+      <data key="d7">35434.62</data>
+      <data key="d8">2024-01-06 02:00:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_068" id="0">
+      <data key="d6">TXN_00226</data>
+      <data key="d7">39444.73</data>
+      <data key="d8">2024-01-06 04:21:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_006" id="0">
+      <data key="d6">TXN_00237</data>
+      <data key="d7">31108.97</data>
+      <data key="d8">2024-01-06 11:17:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_045" id="0">
+      <data key="d6">TXN_00270</data>
+      <data key="d7">33811.16</data>
+      <data key="d8">2024-01-07 03:05:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_057" target="ACC_033" id="0">
+      <data key="d6">TXN_00333</data>
+      <data key="d7">56176.72</data>
+      <data key="d8">2024-01-08 12:07:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_058" target="ACC_061" id="0">
+      <data key="d6">TXN_00108</data>
+      <data key="d7">22198.82</data>
+      <data key="d8">2024-01-03 16:14:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_058" target="ACC_042" id="0">
+      <data key="d6">TXN_00218</data>
+      <data key="d7">64886.39</data>
+      <data key="d8">2024-01-06 01:19:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_058" target="ACC_048" id="0">
+      <data key="d6">TXN_00275</data>
+      <data key="d7">28215.0</data>
+      <data key="d8">2024-01-07 05:41:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_058" target="ACC_036" id="0">
+      <data key="d6">TXN_00311</data>
+      <data key="d7">61985.69</data>
+      <data key="d8">2024-01-08 00:05:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_059" target="ACC_054" id="0">
+      <data key="d6">TXN_00051</data>
+      <data key="d7">66517.2</data>
+      <data key="d8">2024-01-02 12:10:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_059" target="ACC_002" id="0">
+      <data key="d6">TXN_00138</data>
+      <data key="d7">54322.07</data>
+      <data key="d8">2024-01-04 09:03:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_059" target="ACC_052" id="0">
+      <data key="d6">TXN_00187</data>
+      <data key="d7">31491.23</data>
+      <data key="d8">2024-01-05 08:51:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_059" target="ACC_031" id="0">
+      <data key="d6">TXN_00306</data>
+      <data key="d7">16528.26</data>
+      <data key="d8">2024-01-07 21:32:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_059" target="ACC_020" id="0">
+      <data key="d6">TXN_00315</data>
+      <data key="d7">45666.41</data>
+      <data key="d8">2024-01-08 02:24:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_059" target="ACC_070" id="0">
+      <data key="d6">TXN_00343</data>
+      <data key="d7">39561.73</data>
+      <data key="d8">2024-01-08 17:14:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_059" target="ACC_033" id="0">
+      <data key="d6">TXN_00345</data>
+      <data key="d7">54035.56</data>
+      <data key="d8">2024-01-08 17:23:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_060" target="ACC_032" id="0">
+      <data key="d6">TXN_00004</data>
+      <data key="d7">65649.2</data>
+      <data key="d8">2024-01-01 10:25:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_060" target="ACC_068" id="0">
+      <data key="d6">TXN_00055</data>
+      <data key="d7">74097.99</data>
+      <data key="d8">2024-01-02 13:52:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_060" target="ACC_010" id="0">
+      <data key="d6">TXN_00160</data>
+      <data key="d7">10986.4</data>
+      <data key="d8">2024-01-04 19:56:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_060" target="ACC_017" id="0">
+      <data key="d6">TXN_00284</data>
+      <data key="d7">46090.15</data>
+      <data key="d8">2024-01-07 09:30:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_060" target="ACC_067" id="0">
+      <data key="d6">TXN_00287</data>
+      <data key="d7">26166.35</data>
+      <data key="d8">2024-01-07 11:59:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_060" target="ACC_016" id="0">
+      <data key="d6">TXN_00301</data>
+      <data key="d7">20426.64</data>
+      <data key="d8">2024-01-07 18:35:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_060" target="ACC_035" id="0">
+      <data key="d6">TXN_00344</data>
+      <data key="d7">14864.45</data>
+      <data key="d8">2024-01-08 17:22:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_061" target="ACC_058" id="0">
+      <data key="d6">TXN_00057</data>
+      <data key="d7">19809.77</data>
+      <data key="d8">2024-01-02 14:44:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_061" target="ACC_034" id="0">
+      <data key="d6">TXN_00139</data>
+      <data key="d7">25722.81</data>
+      <data key="d8">2024-01-04 09:48:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_061" target="ACC_034" id="1">
+      <data key="d6">TXN_00320</data>
+      <data key="d7">72546.77</data>
+      <data key="d8">2024-01-08 05:45:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_061" target="ACC_065" id="0">
+      <data key="d6">TXN_00224</data>
+      <data key="d7">11739.15</data>
+      <data key="d8">2024-01-06 03:58:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_061" target="ACC_033" id="0">
+      <data key="d6">TXN_00263</data>
+      <data key="d7">3228.25</data>
+      <data key="d8">2024-01-06 23:37:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_061" target="ACC_062" id="0">
+      <data key="d6">TXN_00338</data>
+      <data key="d7">48965.13</data>
+      <data key="d8">2024-01-08 15:40:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_062" target="ACC_065" id="0">
+      <data key="d6">TXN_00011</data>
+      <data key="d7">68994.34</data>
+      <data key="d8">2024-01-01 13:35:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_062" target="ACC_057" id="0">
+      <data key="d6">TXN_00100</data>
+      <data key="d7">25882.59</data>
+      <data key="d8">2024-01-03 13:19:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_062" target="ACC_014" id="0">
+      <data key="d6">TXN_00151</data>
+      <data key="d7">18171.82</data>
+      <data key="d8">2024-01-04 14:58:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_062" target="ACC_068" id="0">
+      <data key="d6">TXN_00326</data>
+      <data key="d7">28573.45</data>
+      <data key="d8">2024-01-08 08:11:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_062" target="ACC_025" id="0">
+      <data key="d6">TXN_00328</data>
+      <data key="d7">71821.64</data>
+      <data key="d8">2024-01-08 09:19:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_063" target="ACC_020" id="0">
+      <data key="d6">TXN_00009</data>
+      <data key="d7">14647.39</data>
+      <data key="d8">2024-01-01 12:57:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_063" target="ACC_020" id="1">
+      <data key="d6">TXN_00132</data>
+      <data key="d7">33767.78</data>
+      <data key="d8">2024-01-04 05:55:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_063" target="ACC_031" id="0">
+      <data key="d6">TXN_00058</data>
+      <data key="d7">20957.51</data>
+      <data key="d8">2024-01-02 14:49:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_063" target="ACC_029" id="0">
+      <data key="d6">TXN_00065</data>
+      <data key="d7">20833.68</data>
+      <data key="d8">2024-01-02 18:24:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_063" target="ACC_058" id="0">
+      <data key="d6">TXN_00090</data>
+      <data key="d7">59573.5</data>
+      <data key="d8">2024-01-03 08:03:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_063" target="ACC_014" id="0">
+      <data key="d6">TXN_00099</data>
+      <data key="d7">65517.62</data>
+      <data key="d8">2024-01-03 13:15:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_063" target="ACC_012" id="0">
+      <data key="d6">TXN_00118</data>
+      <data key="d7">35515.77</data>
+      <data key="d8">2024-01-03 21:53:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_063" target="ACC_041" id="0">
+      <data key="d6">TXN_00330</data>
+      <data key="d7">36245.36</data>
+      <data key="d8">2024-01-08 10:41:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_064" target="ACC_057" id="0">
+      <data key="d6">TXN_00123</data>
+      <data key="d7">57119.29</data>
+      <data key="d8">2024-01-04 00:19:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_064" target="ACC_015" id="0">
+      <data key="d6">TXN_00166</data>
+      <data key="d7">7740.8</data>
+      <data key="d8">2024-01-04 22:41:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_064" target="ACC_040" id="0">
+      <data key="d6">TXN_00305</data>
+      <data key="d7">37554.09</data>
+      <data key="d8">2024-01-07 21:09:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_065" target="ACC_055" id="0">
+      <data key="d6">TXN_00056</data>
+      <data key="d7">62377.4</data>
+      <data key="d8">2024-01-02 14:28:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_065" target="ACC_044" id="0">
+      <data key="d6">TXN_00080</data>
+      <data key="d7">1442.59</data>
+      <data key="d8">2024-01-03 03:09:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_065" target="ACC_035" id="0">
+      <data key="d6">TXN_00131</data>
+      <data key="d7">61630.94</data>
+      <data key="d8">2024-01-04 05:24:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_065" target="ACC_056" id="0">
+      <data key="d6">TXN_00185</data>
+      <data key="d7">7888.8</data>
+      <data key="d8">2024-01-05 08:29:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_066" target="ACC_011" id="0">
+      <data key="d6">TXN_00012</data>
+      <data key="d7">63925.02</data>
+      <data key="d8">2024-01-01 13:40:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_066" target="ACC_052" id="0">
+      <data key="d6">TXN_00036</data>
+      <data key="d7">51124.1</data>
+      <data key="d8">2024-01-02 05:40:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_066" target="ACC_042" id="0">
+      <data key="d6">TXN_00347</data>
+      <data key="d7">6961.96</data>
+      <data key="d8">2024-01-08 18:47:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_067" target="ACC_057" id="0">
+      <data key="d6">TXN_00117</data>
+      <data key="d7">68747.42</data>
+      <data key="d8">2024-01-03 21:26:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_067" target="ACC_039" id="0">
+      <data key="d6">TXN_00181</data>
+      <data key="d7">34624.17</data>
+      <data key="d8">2024-01-05 06:33:00</data>
+      <data key="d9">UPI</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_067" target="ACC_020" id="0">
+      <data key="d6">TXN_00289</data>
+      <data key="d7">23157.28</data>
+      <data key="d8">2024-01-07 13:09:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_068" target="ACC_045" id="0">
+      <data key="d6">TXN_00092</data>
+      <data key="d7">32200.03</data>
+      <data key="d8">2024-01-03 09:29:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_068" target="ACC_028" id="0">
+      <data key="d6">TXN_00198</data>
+      <data key="d7">28526.48</data>
+      <data key="d8">2024-01-05 13:50:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_068" target="ACC_040" id="0">
+      <data key="d6">TXN_00204</data>
+      <data key="d7">3883.59</data>
+      <data key="d8">2024-01-05 17:56:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_069" target="ACC_026" id="0">
+      <data key="d6">TXN_00041</data>
+      <data key="d7">27634.5</data>
+      <data key="d8">2024-01-02 07:31:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_069" target="ACC_004" id="0">
+      <data key="d6">TXN_00067</data>
+      <data key="d7">68066.2</data>
+      <data key="d8">2024-01-02 19:56:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_069" target="ACC_062" id="0">
+      <data key="d6">TXN_00083</data>
+      <data key="d7">35133.1</data>
+      <data key="d8">2024-01-03 05:30:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_069" target="ACC_002" id="0">
+      <data key="d6">TXN_00308</data>
+      <data key="d7">63614.34</data>
+      <data key="d8">2024-01-07 22:54:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_069" target="ACC_005" id="0">
+      <data key="d6">TXN_00340</data>
+      <data key="d7">68535.61</data>
+      <data key="d8">2024-01-08 15:58:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_070" target="ACC_008" id="0">
+      <data key="d6">TXN_00010</data>
+      <data key="d7">56224.18</data>
+      <data key="d8">2024-01-01 13:01:00</data>
+      <data key="d9">CASH_DEP</data>
+      <data key="d10">mobile</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_070" target="ACC_060" id="0">
+      <data key="d6">TXN_00122</data>
+      <data key="d7">31286.94</data>
+      <data key="d8">2024-01-04 00:05:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_070" target="ACC_049" id="0">
+      <data key="d6">TXN_00133</data>
+      <data key="d7">34423.17</data>
+      <data key="d8">2024-01-04 06:16:00</data>
+      <data key="d9">CASH_WD</data>
+      <data key="d10">web</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_070" target="ACC_021" id="0">
+      <data key="d6">TXN_00149</data>
+      <data key="d7">6002.71</data>
+      <data key="d8">2024-01-04 14:01:00</data>
+      <data key="d9">RTGS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_070" target="ACC_047" id="0">
+      <data key="d6">TXN_00158</data>
+      <data key="d7">40048.5</data>
+      <data key="d8">2024-01-04 19:22:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">branch</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_070" target="ACC_068" id="0">
+      <data key="d6">TXN_00235</data>
+      <data key="d7">3312.19</data>
+      <data key="d8">2024-01-06 09:39:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_070" target="ACC_065" id="0">
+      <data key="d6">TXN_00256</data>
+      <data key="d7">59087.72</data>
+      <data key="d8">2024-01-06 20:27:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">upi</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_070" target="ACC_038" id="0">
+      <data key="d6">TXN_00296</data>
+      <data key="d7">48322.09</data>
+      <data key="d8">2024-01-07 16:52:00</data>
+      <data key="d9">NEFT</data>
+      <data key="d10">atm</data>
+      <data key="d11">normal</data>
+      <data key="d12">none</data>
+    </edge>
+    <edge source="ACC_071" target="ACC_040" id="0">
+      <data key="d6">TXN_00366</data>
+      <data key="d7">160000.0</data>
+      <data key="d8">2024-01-01 19:01:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">fraud</data>
+      <data key="d12">dormant_activation</data>
+    </edge>
+    <edge source="ACC_071" target="ACC_041" id="0">
+      <data key="d6">TXN_00367</data>
+      <data key="d7">159000.0</data>
+      <data key="d8">2024-01-01 19:04:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">fraud</data>
+      <data key="d12">dormant_activation</data>
+    </edge>
+    <edge source="ACC_071" target="ACC_042" id="0">
+      <data key="d6">TXN_00368</data>
+      <data key="d7">158000.0</data>
+      <data key="d8">2024-01-01 19:07:00</data>
+      <data key="d9">IMPS</data>
+      <data key="d10">mobile</data>
+      <data key="d11">fraud</data>
+      <data key="d12">dormant_activation</data>
+    </edge>
+  </graph>
+</graphml>
