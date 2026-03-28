@@ -1,0 +1,20 @@
+{
+  "alert": "MEDIUM",
+  "path": "ACC_047 > ACC_050",
+  "pattern": "Circular transaction",
+  "time_span": "2 minutes 14 seconds",
+  "risk_score": 40,
+  "reason": "Funds returned to origin in <3 min across 3 accounts",
+  "fiu_ready": true,
+  "transaction_id": "TXN_00274",
+  "timestamp": "2024-01-07T04:52:00",
+  "amount": 71235.3,
+  "accounts_involved": [
+    "ACC_047",
+    "ACC_050"
+  ],
+  "channel": "upi",
+  "tx_type": "NEFT",
+  "generated_at": "2026-03-28T18:07:50.890955",
+  "evidence_version": "1.0"
+}

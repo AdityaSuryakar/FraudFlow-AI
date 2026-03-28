@@ -1,0 +1,20 @@
+{
+  "alert": "MEDIUM",
+  "path": "ACC_032 > ACC_007",
+  "pattern": "Circular transaction",
+  "time_span": "2 minutes 14 seconds",
+  "risk_score": 40,
+  "reason": "Funds returned to origin in <3 min across 3 accounts",
+  "fiu_ready": true,
+  "transaction_id": "TXN_00335",
+  "timestamp": "2024-01-08T13:29:00",
+  "amount": 50402.63,
+  "accounts_involved": [
+    "ACC_032",
+    "ACC_007"
+  ],
+  "channel": "web",
+  "tx_type": "CASH_WD",
+  "generated_at": "2026-03-28T18:07:59.635209",
+  "evidence_version": "1.0"
+}

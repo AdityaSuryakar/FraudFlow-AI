@@ -26,10 +26,14 @@ def get_outgoing_journey(G, account, cutoff=10, min_amount=None, time_window=Non
     
     paths = []
     queue = deque([(account, [account])])
-    visited = set()
-    
+    visited = set([account])
+
     while queue:
         current, path = queue.popleft()
+
+        if current in visited:
+            continue
+        visited.add(current)
         
         if len(path) > cutoff:
             continue
@@ -57,7 +61,7 @@ def get_outgoing_journey(G, account, cutoff=10, min_amount=None, time_window=Non
     return paths
 
 
-def get_incoming_journey(G, account, cutoff=10, min_amount=None, time_window=None):
+def get_incoming_journey(G, account, cutoff=5, min_amount=None, time_window=None):
     """
     BFS to find all incoming paths TO an account (reverse journey).
     

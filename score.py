@@ -1,65 +1,83 @@
 """
-score.py — Risk scoring module
-Combines pattern flags into 0-100 risk score using weighted formula.
+score.py — Enhanced Risk Scoring Module (Version 2)
 
-Formula:
-    score = (circular × 40) + (rapid_hops × 20) + (structuring × 25) + (dormant × 15)
-
-Thresholds:
-    <30  = allow (low risk)
-    30-70 = flag (medium risk)
-    >70  = alert (high risk)
+Improvement:
+- Dynamic scoring (not fixed weights only)
+- Uses pattern details (cycle length, txn count)
+- Adds combination bonus
+- Produces varied scores (realistic behavior)
 """
 
 import json
 
-# Weight constants
+# Base weights
 WEIGHT_CIRCULAR = 40
 WEIGHT_RAPID = 20
 WEIGHT_STRUCTURING = 25
 WEIGHT_DORMANT = 15
 
-# Threshold constants
+# Thresholds
 THRESHOLD_LOW = 30
 THRESHOLD_HIGH = 70
 
 
 def calculate_score(detection_results):
-    """
-    Calculate risk score from detection results.
-    
-    Args:
-        detection_results: dict with keys 'circular', 'rapid', 'structuring', 'dormant'
-                          each containing a dict with 'flag' boolean
-    
-    Returns:
-        int: risk score 0-100
-    """
-    circular = 1 if detection_results.get("circular", {}).get("flag", False) else 0
-    rapid = 1 if detection_results.get("rapid", {}).get("flag", False) else 0
-    structuring = 1 if detection_results.get("structuring", {}).get("flag", False) else 0
-    dormant = 1 if detection_results.get("dormant", {}).get("flag", False) else 0
-    
-    score = (
-        circular * WEIGHT_CIRCULAR +
-        rapid * WEIGHT_RAPID +
-        structuring * WEIGHT_STRUCTURING +
-        dormant * WEIGHT_DORMANT
+    score = 0
+
+    # 🔴 CIRCULAR (dynamic based on cycle length)
+    if detection_results.get("circular", {}).get("flag"):
+        details = detection_results["circular"].get("details", {})
+        lengths = details.get("cycle_lengths", [])
+
+        if lengths:
+            min_len = min(lengths)
+            if min_len <= 3:
+                score += 50   # 🔥 high risk
+            elif min_len <= 5:
+                score += 35
+            else:
+                score += 20
+        else:
+            score += WEIGHT_CIRCULAR
+
+    # ⚡ RAPID (based on number of transactions)
+    if detection_results.get("rapid", {}).get("flag"):
+        details = detection_results["rapid"].get("details", {})
+        count = details.get("transaction_count", 1)
+
+        score += min(10 + count * 3, 30)  # scaled contribution
+
+    # 💰 STRUCTURING
+    if detection_results.get("structuring", {}).get("flag"):
+        details = detection_results["structuring"].get("details", {})
+        count = details.get("transaction_count", 1)
+
+        score += min(15 + count * 2, 35)
+
+    # 😴 DORMANT
+    if detection_results.get("dormant", {}).get("flag"):
+        details = detection_results["dormant"].get("details", {})
+        days = details.get("days_inactive", 0)
+
+        if days > 180:
+            score += 25
+        else:
+            score += WEIGHT_DORMANT
+
+    # 🔥 COMBINATION BONUS (VERY IMPORTANT)
+    active_patterns = sum(
+        1 for v in detection_results.values() if v.get("flag")
     )
-    
-    return min(score, 100)  # Cap at 100
+
+    if active_patterns >= 2:
+        score += 15
+    if active_patterns >= 3:
+        score += 10
+
+    return min(score, 100)
 
 
 def get_risk_level(score):
-    """
-    Get risk level category based on score.
-    
-    Args:
-        score: int 0-100
-    
-    Returns:
-        str: 'allow', 'flag', or 'alert'
-    """
     if score < THRESHOLD_LOW:
         return "allow"
     elif score <= THRESHOLD_HIGH:
@@ -69,119 +87,61 @@ def get_risk_level(score):
 
 
 def get_risk_level_emoji(level):
-    """Get emoji indicator for risk level."""
     return {"allow": "🟢", "flag": "🟡", "alert": "🔴"}.get(level, "⚪")
 
 
 def score_account(account_id, detection_results):
-    """
-    Score a single account and return full details.
-    
-    Returns:
-        dict with score, level, and contributing factors
-    """
     score = calculate_score(detection_results)
     level = get_risk_level(score)
-    
-    # Identify contributing factors
+
     factors = []
-    if detection_results.get("circular", {}).get("flag"):
-        factors.append(f"circular(+{WEIGHT_CIRCULAR})")
-    if detection_results.get("rapid", {}).get("flag"):
-        factors.append(f"rapid(+{WEIGHT_RAPID})")
-    if detection_results.get("structuring", {}).get("flag"):
-        factors.append(f"structuring(+{WEIGHT_STRUCTURING})")
-    if detection_results.get("dormant", {}).get("flag"):
-        factors.append(f"dormant(+{WEIGHT_DORMANT})")
-    
+    for k, v in detection_results.items():
+        if v.get("flag"):
+            factors.append(k)
+
     return {
         "account_id": account_id,
         "score": score,
         "level": level,
         "emoji": get_risk_level_emoji(level),
-        "factors": factors,
-        "patterns": {
-            "circular": detection_results.get("circular", {}).get("flag", False),
-            "rapid": detection_results.get("rapid", {}).get("flag", False),
-            "structuring": detection_results.get("structuring", {}).get("flag", False),
-            "dormant": detection_results.get("dormant", {}).get("flag", False)
-        }
+        "factors": factors
     }
 
 
 def score_all_accounts(all_detection_results):
-    """
-    Score all accounts from detection results.
-    
-    Args:
-        all_detection_results: dict mapping account_id -> detection results dict
-    
-    Returns:
-        list of scored account dicts, sorted by score descending
-    """
     scored = []
+
     for account_id, detection_results in all_detection_results.items():
         scored.append(score_account(account_id, detection_results))
-    
-    # Sort by score descending
+
     scored.sort(key=lambda x: x["score"], reverse=True)
     return scored
 
 
 def print_score_summary(scored_accounts, top_n=20):
-    """Print a formatted summary of scored accounts."""
     print("\n" + "=" * 80)
-    print("RISK SCORING SUMMARY")
+    print("ENHANCED RISK SCORING SUMMARY")
     print("=" * 80)
-    print(f"\nFormula: circular×{WEIGHT_CIRCULAR} + rapid×{WEIGHT_RAPID} + structuring×{WEIGHT_STRUCTURING} + dormant×{WEIGHT_DORMANT}")
-    print(f"Thresholds: <{THRESHOLD_LOW}=allow | {THRESHOLD_LOW}-{THRESHOLD_HIGH}=flag | >{THRESHOLD_HIGH}=alert")
-    
-    # Count by level
+
     counts = {"allow": 0, "flag": 0, "alert": 0}
+
     for acc in scored_accounts:
         counts[acc["level"]] += 1
-    
+
     print(f"\nDistribution:")
-    print(f"  🟢 Allow (<{THRESHOLD_LOW}):  {counts['allow']} accounts")
-    print(f"  🟡 Flag ({THRESHOLD_LOW}-{THRESHOLD_HIGH}): {counts['flag']} accounts")
-    print(f"  🔴 Alert (>{THRESHOLD_HIGH}): {counts['alert']} accounts")
-    
-    # Show top risk accounts
-    print(f"\n{'=' * 80}")
-    print(f"TOP {top_n} HIGH-RISK ACCOUNTS")
-    print("=" * 80)
-    print(f"{'Score':<8}{'Level':<12}{'Account':<15}{'Contributing Factors'}")
-    print("-" * 80)
-    
+    print(f"🟢 Allow:  {counts['allow']}")
+    print(f"🟡 Flag:   {counts['flag']}")
+    print(f"🔴 Alert:  {counts['alert']}")
+
+    print("\nTop Risk Accounts:")
+    print("-" * 60)
+
     for acc in scored_accounts[:top_n]:
-        factors_str = ", ".join(acc["factors"]) if acc["factors"] else "none"
-        print(f"{acc['score']:<8}{acc['emoji']} {acc['level']:<10}{acc['account_id']:<15}{factors_str}")
+        print(f"{acc['emoji']} {acc['account_id']} → Score: {acc['score']} → {acc['level']} ({', '.join(acc['factors'])})")
 
 
 def export_scores(scored_accounts, filepath="risk_scores.json"):
-    """Export scores to JSON file."""
     with open(filepath, "w") as f:
         json.dump(scored_accounts, f, indent=2, default=str)
+
     print(f"\nScores exported to: {filepath}")
-
-
-if __name__ == "__main__":
-    # Test scoring logic with sample data
-    print("Testing scoring module...")
-    
-    # Test single pattern
-    test_single = {"circular": {"flag": True}, "rapid": {"flag": False}, 
-                   "structuring": {"flag": False}, "dormant": {"flag": False}}
-    print(f"Circular only: {calculate_score(test_single)} (expected: {WEIGHT_CIRCULAR})")
-    
-    # Test multiple patterns
-    test_multi = {"circular": {"flag": True}, "rapid": {"flag": True}, 
-                  "structuring": {"flag": True}, "dormant": {"flag": True}}
-    expected = WEIGHT_CIRCULAR + WEIGHT_RAPID + WEIGHT_STRUCTURING + WEIGHT_DORMANT
-    print(f"All patterns: {calculate_score(test_multi)} (expected: {expected})")
-    
-    # Test thresholds
-    print(f"\nThreshold check:")
-    print(f"  Score 25: {get_risk_level(25)} (expected: allow)")
-    print(f"  Score 50: {get_risk_level(50)} (expected: flag)")
-    print(f"  Score 85: {get_risk_level(85)} (expected: alert)")

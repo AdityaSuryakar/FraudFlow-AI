@@ -1,0 +1,20 @@
+{
+  "alert": "HIGH",
+  "path": "ACC_071 > ACC_041",
+  "pattern": "Circular transaction",
+  "time_span": "10 minutes",
+  "risk_score": 75,
+  "reason": "Funds returned to origin in <3 min across 3 accounts; Multiple rapid transactions (3 in short window)",
+  "fiu_ready": true,
+  "transaction_id": "TXN_00367",
+  "timestamp": "2024-01-01T19:04:00",
+  "amount": 159000.0,
+  "accounts_involved": [
+    "ACC_071",
+    "ACC_041"
+  ],
+  "channel": "mobile",
+  "tx_type": "IMPS",
+  "generated_at": "2026-03-28T18:07:16.952491",
+  "evidence_version": "1.0"
+}

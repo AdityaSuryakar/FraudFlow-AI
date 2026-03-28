@@ -1,0 +1,20 @@
+{
+  "alert": "MEDIUM",
+  "path": "ACC_035 > ACC_011",
+  "pattern": "Circular transaction",
+  "time_span": "2 minutes 14 seconds",
+  "risk_score": 40,
+  "reason": "Funds returned to origin in <3 min across 3 accounts",
+  "fiu_ready": true,
+  "transaction_id": "TXN_00267",
+  "timestamp": "2024-01-07T01:25:00",
+  "amount": 54667.56,
+  "accounts_involved": [
+    "ACC_035",
+    "ACC_011"
+  ],
+  "channel": "atm",
+  "tx_type": "CASH_DEP",
+  "generated_at": "2026-03-28T18:07:49.850533",
+  "evidence_version": "1.0"
+}

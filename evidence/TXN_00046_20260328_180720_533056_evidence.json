@@ -1,0 +1,20 @@
+{
+  "alert": "MEDIUM",
+  "path": "ACC_027 > ACC_056",
+  "pattern": "Circular transaction",
+  "time_span": "2 minutes 14 seconds",
+  "risk_score": 40,
+  "reason": "Funds returned to origin in <3 min across 3 accounts",
+  "fiu_ready": true,
+  "transaction_id": "TXN_00046",
+  "timestamp": "2024-01-02T09:15:00",
+  "amount": 59039.03,
+  "accounts_involved": [
+    "ACC_027",
+    "ACC_056"
+  ],
+  "channel": "branch",
+  "tx_type": "UPI",
+  "generated_at": "2026-03-28T18:07:20.531576",
+  "evidence_version": "1.0"
+}

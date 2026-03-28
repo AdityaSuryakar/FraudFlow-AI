@@ -1,0 +1,20 @@
+{
+  "alert": "MEDIUM",
+  "path": "ACC_059 > ACC_031",
+  "pattern": "Circular transaction",
+  "time_span": "2 minutes 14 seconds",
+  "risk_score": 40,
+  "reason": "Funds returned to origin in <3 min across 3 accounts",
+  "fiu_ready": true,
+  "transaction_id": "TXN_00306",
+  "timestamp": "2024-01-07T21:32:00",
+  "amount": 16528.26,
+  "accounts_involved": [
+    "ACC_059",
+    "ACC_031"
+  ],
+  "channel": "mobile",
+  "tx_type": "IMPS",
+  "generated_at": "2026-03-28T18:07:55.569927",
+  "evidence_version": "1.0"
+}

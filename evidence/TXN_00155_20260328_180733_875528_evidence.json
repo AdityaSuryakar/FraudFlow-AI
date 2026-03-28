@@ -1,0 +1,20 @@
+{
+  "alert": "MEDIUM",
+  "path": "ACC_018 > ACC_013",
+  "pattern": "Circular transaction",
+  "time_span": "2 minutes 14 seconds",
+  "risk_score": 40,
+  "reason": "Funds returned to origin in <3 min across 3 accounts",
+  "fiu_ready": true,
+  "transaction_id": "TXN_00155",
+  "timestamp": "2024-01-04T17:24:00",
+  "amount": 67803.58,
+  "accounts_involved": [
+    "ACC_018",
+    "ACC_013"
+  ],
+  "channel": "mobile",
+  "tx_type": "RTGS",
+  "generated_at": "2026-03-28T18:07:33.873500",
+  "evidence_version": "1.0"
+}

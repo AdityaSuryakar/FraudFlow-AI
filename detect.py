@@ -35,18 +35,18 @@ def build_graph(txn_df):
 
 
 def detect_circular(G, max_hops=4):
-    """
-    Detect circular transaction patterns.
-    Returns dict of {account: cycle_details} for accounts in cycles ≤ max_hops.
-    """
-    # Convert to simple DiGraph for cycle detection
-    simple_G = nx.DiGraph()
+
+    import networkx as nx
+
+    # ✅ Convert MultiGraph → simple Graph
+    simple_G = nx.Graph()
     for u, v in G.edges():
         simple_G.add_edge(u, v)
-    
+
+    cycles = nx.cycle_basis(simple_G)
+
     circular_flags = {}
-    cycles = list(nx.simple_cycles(simple_G))
-    
+
     for cycle in cycles:
         if len(cycle) <= max_hops:
             for acc in cycle:
@@ -58,36 +58,36 @@ def detect_circular(G, max_hops=4):
                     }
                 circular_flags[acc]["cycles"].append(cycle)
                 circular_flags[acc]["cycle_lengths"].append(len(cycle))
-    
+
     return circular_flags
 
-
 def detect_rapid(txn_df, window_minutes=10, min_txns=3):
-    """
-    Detect rapid transaction patterns (3+ txns within 10 min window).
-    Returns dict of {account: rapid_details}.
-    """
+
+    import pandas as pd
+    from datetime import timedelta
+
+    # ✅ Ensure datetime
+    if txn_df["timestamp"].dtype == object:
+        txn_df["timestamp"] = pd.to_datetime(txn_df["timestamp"])
+
     rapid_flags = {}
-    
-    # Group by sender
+
     for sender, group in txn_df.groupby("sender"):
         if len(group) < min_txns:
             continue
-        
-        # Sort by timestamp
+
         group = group.sort_values("timestamp")
         timestamps = group["timestamp"].tolist()
-        
-        # Sliding window check
+
         for i in range(len(timestamps) - min_txns + 1):
             window_start = timestamps[i]
             window_end = window_start + timedelta(minutes=window_minutes)
-            
+
             txns_in_window = group[
-                (group["timestamp"] >= window_start) & 
+                (group["timestamp"] >= window_start) &
                 (group["timestamp"] <= window_end)
             ]
-            
+
             if len(txns_in_window) >= min_txns:
                 rapid_flags[sender] = {
                     "flag": True,
@@ -97,7 +97,7 @@ def detect_rapid(txn_df, window_minutes=10, min_txns=3):
                     "transaction_ids": txns_in_window["txn_id"].tolist()
                 }
                 break
-    
+
     return rapid_flags
 
 
