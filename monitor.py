@@ -61,19 +61,11 @@ class MonitoringAgent:
             print("❌ No transaction data available")
             return
 
-        # Filter to only high-risk transactions for focused testing
-        high_risk_ids = ["TXN_00366", "TXN_00367", "TXN_00368"]
-        filtered_df = self.txn_df[self.txn_df["txn_id"].isin(high_risk_ids)]
-
-        if filtered_df.empty:
-            print(f"❌ No high-risk transactions found with IDs: {high_risk_ids}")
-            return
-
-        print(f"🎯 Processing {len(filtered_df)} high-risk transactions (filtered from {len(self.txn_df)} total)...")
+        print(f"📊 Processing {len(self.txn_df)} transactions...")
         print("=" * 80)
 
-        for idx, transaction in filtered_df.iterrows():
-            print(f"\n🔍 Processing High-Risk Transaction: {transaction['txn_id']}")
+        for idx, transaction in self.txn_df.iterrows():
+            print(f"\n🔍 Processing Transaction {idx + 1}: {transaction['txn_id']}")
             print(f"   Sender: {transaction['sender']} → Receiver: {transaction['receiver']}")
             print(f"   Amount: ${transaction['amount']:.2f} | Time: {transaction['timestamp']}")
 
@@ -98,10 +90,6 @@ class MonitoringAgent:
                 
                 if decision_result['alert_level'] == 'HIGH':
                     print("   🚫 HIGH ALERT: Accounts blocked, FIU evidence generated")
-                    print("\n🚨 ALERT GENERATED 🚨")
-                    print("This evidence JSON can be directly submitted to the Financial Intelligence Unit.")
-                    print("We don't just detect - we document!")
-                    print(f"Evidence: {evidence}")
                 else:
                     print("   ⚠️  FLAGGED: Transaction logged for review")
 
@@ -110,10 +98,6 @@ class MonitoringAgent:
                 time.sleep(delay)
 
         print("\n" + "=" * 80)
-        print("📋 High-Risk Transaction Analysis Complete:")
-        print(f"   Total high-risk transactions processed: {len(filtered_df)}")
-        print(f"   Blocked accounts: {len(self.action_agent.get_blocked_accounts())}")
-        print("   Check 'logs/' and 'evidence/' directories for outputs"
         print("📋 Summary:")
         print(f"   Total transactions processed: {len(self.txn_df)}")
         print(f"   Blocked accounts: {len(self.action_agent.get_blocked_accounts())}")
