@@ -1,8 +1,6 @@
 """
-app.py
-======
-Entry point for the AI Fund Flow Intelligence System.
-
+app.py — Entry point for FraudFlow-AI dashboard
+================================================
 Run with:
     streamlit run app.py
   or
