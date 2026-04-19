@@ -1,88 +1,135 @@
 """
 fraud_investigator.py
 =====================
-Renders the Fraud Path Investigation panel — account selector, chain path
-display, risk badge, evidence checklist, and report generation button.
+Interactive fraud path investigation panel.
+Lets users pick any suspicious account,
+see its full fund-flow chain, risk score, and generate a FIU-ready evidence report.
 """
 
+import json
 import streamlit as st
 
-from data.data_store import DataStore, FraudChainRecord
+from data.pipeline_connector import PipelineConnector
 
 
 class FraudInvestigator:
     """
-    Interactive panel that lets users select an account and view
-    its detected fraud chain, risk score, and generate an evidence report.
+    Interactive panel: account selector → chain path → risk badge → FIU report.
     """
 
-    EVIDENCE_ITEMS = [
-        "Transaction Chain",
-        "Accounts",
-        "Suspicious Pattern",
-        "Risk Score",
-    ]
-
-    # ── private helpers ───────────────────────────────────────────────────────
-
-    @staticmethod
-    def _chain_html(chain_str: str) -> str:
-        return f'<div class="fraud-chain">{chain_str}</div>'
-
-    @staticmethod
-    def _risk_badge_html(ci: FraudChainRecord) -> str:
-        score_cls = "risk-score-high"  if ci.risk == "High" else "risk-score-medium"
-        label_cls = "risk-label-high"  if ci.risk == "High" else "risk-label-medium"
-        return (
-            f'<div style="margin-bottom:0.8rem;">'
-            f'<span style="color:#6b7280;font-size:0.85rem;">'
-            f'Fraud Chain: {ci.pattern} &nbsp; Risk Score:</span>'
-            f'<span class="{score_cls}">{ci.score}</span>'
-            f'<span class="{label_cls}">{ci.risk} Risk</span>'
-            f'</div>'
-        )
+    PATTERN_ICONS = {
+        "circular":    "🔄 Circular Transfer",
+        "rapid":       "⚡ Rapid Transactions",
+        "structuring": "💰 Structuring (Smurfing)",
+        "dormant":     "😴 Dormant Account Activation",
+    }
 
     @classmethod
-    def _evidence_panel_html(cls) -> str:
-        items_html = "".join(
-            f'<div class="check-item">✔ {item}</div>'
-            for item in cls.EVIDENCE_ITEMS
-        )
-        return (
-            f'<div class="panel" style="margin-bottom:0.8rem;">'
-            f'<div style="color:#1565c0;font-weight:800;font-size:0.9rem;margin-bottom:0.5rem;">'
-            f'📋 Generate Evidence Report</div>'
-            f'{items_html}'
-            f'</div>'
-        )
-
-    # ── public render ─────────────────────────────────────────────────────────
-
-    @classmethod
-    def render(cls):
+    def render(cls, connector: PipelineConnector):
         """Draw the full Fraud Path Investigation section."""
         st.markdown(
-            '<div class="section-header">👥 Fraud Path Investigation</div>',
+            '<div class="section-header">👥 Fraud Path Investigator</div>'
+            '<div class="section-sub">Select an account to trace its complete fund-flow chain and generate FIU evidence</div>',
             unsafe_allow_html=True,
         )
 
-        # Account selector
-        selected  = st.selectbox("Select Account", list(DataStore.FRAUD_CHAINS.keys()), key="acct")
-        ci        = DataStore.FRAUD_CHAINS[selected]
-        chain_str = " → ".join(ci.chain)
+        suspicious_ids = connector.get_all_suspicious_account_ids()
+        if not suspicious_ids:
+            st.info("No suspicious accounts detected.")
+            return
 
-        # Chain path display
-        st.markdown(cls._chain_html(chain_str), unsafe_allow_html=True)
+        selected = st.selectbox(
+            "Select Suspicious Account",
+            suspicious_ids,
+            key="investigator_account",
+            help="List shows all HIGH/MEDIUM risk accounts detected by the pipeline",
+        )
 
-        # Risk badge
-        st.markdown(cls._risk_badge_html(ci), unsafe_allow_html=True)
+        chain_info = connector.get_fraud_chain(selected)
+        if not chain_info:
+            st.warning(f"Could not trace fund chain for {selected}")
+            return
 
-        # Evidence checklist panel
-        st.markdown(cls._evidence_panel_html(), unsafe_allow_html=True)
+        # ── Chain path display ────────────────────────────────────────
+        st.markdown(
+            f'<div class="fraud-chain">Path: {chain_info["path_str"]}</div>',
+            unsafe_allow_html=True,
+        )
 
-        # Generate Report button
-        if st.button("Generate Report"):
-            st.success(
-                f"✅ Report generated for **{selected}** — "
-                f"`{chain_str}` | Score: **{ci.score}** ({ci.risk})"
+        # ── Risk badge row ────────────────────────────────────────────
+        score   = chain_info["score"]
+        risk    = chain_info["risk"]
+        factors = chain_info["factors"]
+        score_cls = ("score-badge-high" if score > 70
+                     else "score-badge-medium" if score > 30
+                     else "score-badge-low")
+
+        pattern_labels = " · ".join(
+            cls.PATTERN_ICONS.get(f, f.capitalize()) for f in factors
+        ) or "No pattern"
+
+        st.markdown(
+            f'<div style="margin-bottom:0.8rem;">'
+            f'  <span style="color:#64748b;font-size:0.82rem;">Detected patterns: '
+            f'    <span style="color:#a5b4fc;">{pattern_labels}</span>'
+            f'  </span><br>'
+            f'  <span style="color:#64748b;font-size:0.82rem;">Risk Score: </span>'
+            f'  <span class="{score_cls}">{score}</span>'
+            f'  <span style="color:#{"dc2626" if risk=="Alert" else "d97706" if risk=="Flag" else "16a34a"};'
+            f'        font-weight:700;font-size:0.85rem;margin-left:8px;">'
+            f'    {risk} Risk'
+            f'  </span>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+
+        # ── Evidence checklist ────────────────────────────────────────
+        evidence_items = [
+            "✔ Transaction Chain Reconstructed",
+            "✔ Accounts Identified",
+            f"✔ Suspicious Pattern: {pattern_labels}",
+            f"✔ Risk Score Calculated: {score}",
+            "✔ FIU-Ready JSON Generated",
+        ]
+        items_html = "".join(
+            f'<div class="check-item">{item}</div>'
+            for item in evidence_items
+        )
+        st.markdown(
+            f'<div class="glass-panel" style="padding:0.8rem 1rem;margin-bottom:0.8rem;">'
+            f'  <div style="color:#818cf8;font-weight:700;font-size:0.85rem;margin-bottom:0.5rem;">'
+            f'    📋 Evidence Report Contents</div>'
+            f'  {items_html}'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+
+        # ── Generate FIU Report button ────────────────────────────────
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("🔍 Analyse Chain", key="btn_analyse"):
+                txn_df = connector.get_txn_df()
+                acc_txns = txn_df[
+                    (txn_df["sender"] == selected) |
+                    (txn_df["receiver"] == selected)
+                ][["txn_id","sender","receiver","amount","timestamp","tx_type","channel"]].head(10)
+                st.dataframe(
+                    acc_txns,
+                    use_container_width=True,
+                    hide_index=True,
+                )
+
+        with col2:
+            evidence = connector.generate_fiu_evidence(selected)
+            evidence_json = json.dumps(evidence, indent=2, default=str)
+            st.download_button(
+                label="📄 Download FIU Evidence",
+                data=evidence_json,
+                file_name=f"FIU_Evidence_{selected}.json",
+                mime="application/json",
+                key="btn_fiu_download",
             )
+
+        # Preview the evidence
+        with st.expander("👁 Preview FIU Evidence JSON", expanded=False):
+            st.code(evidence_json, language="json")

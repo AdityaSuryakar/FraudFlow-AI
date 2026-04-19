@@ -1,10 +1,11 @@
 """
 header.py
 =========
-Top application header — displays the app title and live scan status badge.
+Top application header with live scan status and system info.
 """
 
 import streamlit as st
+from datetime import datetime
 
 
 class HeaderComponent:
@@ -13,21 +14,29 @@ class HeaderComponent:
     @staticmethod
     def render():
         """Draw the page header with title (left) and status badge (right)."""
-        col_title, col_status = st.columns([3, 1])
+        now_str = datetime.now().strftime("%d %b %Y  %H:%M:%S")
+
+        col_title, col_status = st.columns([4, 2])
 
         with col_title:
             st.markdown(
-                '<span class="title-icon">🏦</span>'
-                '<span class="page-title">AI Fund Flow Intelligence System</span>',
+                '<div class="main-header">'
+                '  <div>'
+                '    <div class="header-logo">🏦 FraudFlow-AI</div>'
+                '    <div class="header-sub">AI-Powered Fund Flow Intelligence &amp; Fraud Detection System</div>'
+                '  </div>'
+                '</div>',
                 unsafe_allow_html=True,
             )
 
         with col_status:
-            st.markdown("""
-            <div class="topbar">
-                <span>Last Transaction Scan: 2 sec ago</span>
-                <span class="status-dot"></span>
-                <span style="color:#16a34a;font-weight:700;">Live</span>
-            </div>""", unsafe_allow_html=True)
+            st.markdown(
+                f'<div style="display:flex;flex-direction:column;align-items:flex-end;padding-top:0.8rem;">'
+                f'  <div class="live-pill"><span class="live-dot"></span> Live Monitoring</div>'
+                f'  <div style="font-size:0.7rem;color:#475569;margin-top:6px;">{now_str} IST</div>'
+                f'  <div style="font-size:0.7rem;color:#4ade80;margin-top:2px;">● 4 Agents Active</div>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
 
-        st.markdown("")
+        st.markdown('<hr style="margin:0.5rem 0 1rem 0;">', unsafe_allow_html=True)

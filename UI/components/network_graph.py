@@ -1,95 +1,141 @@
 """
 network_graph.py
 ================
-Renders the directed fund-flow network graph using networkx + matplotlib.
+Renders an interactive Plotly fund-flow network graph using REAL pipeline data.
+Nodes are color-coded by risk level. Hovering shows account details.
 """
 
 import streamlit as st
 import networkx as nx
-import matplotlib.pyplot as plt
+import plotly.graph_objects as go
+import math
 
-from data.data_store import DataStore
+from data.pipeline_connector import PipelineConnector
 
 
 class NetworkGraph:
-    """
-    Builds a directed graph from DataStore edge/node data
-    and renders it as a styled matplotlib figure inside Streamlit.
-    """
+    """Interactive Plotly fund-flow graph built from real transaction data."""
 
-    def __init__(self):
-        self._graph = self._build_graph()
-
-    def _build_graph(self) -> nx.DiGraph:
-        """Construct the directed graph from DataStore ACCOUNTS and EDGES."""
-        G = nx.DiGraph()
-
-        for node_id in DataStore.ACCOUNTS:
-            G.add_node(node_id)
-
-        for src, dst, color, width in DataStore.EDGES:
-            G.add_edge(src, dst, color=color, width=width)
-
-        return G
-
-    def _draw_edges(self, ax, pos: dict):
-        """Draw all directed edges with their stored colour and width."""
-        G = self._graph
-        nx.draw_networkx_edges(
-            G, pos, ax=ax,
-            edge_color=[G[u][v]["color"] for u, v in G.edges()],
-            width=[G[u][v]["width"] for u, v in G.edges()],
-            arrows=True,
-            arrowsize=22,
-            arrowstyle="-|>",
-            connectionstyle="arc3,rad=0.08",
-            min_source_margin=25,
-            min_target_margin=25,
-        )
-
-    def _draw_nodes(self, ax, pos: dict):
-        """Draw nodes with their colour coding and white borders."""
-        G = self._graph
-        nx.draw_networkx_nodes(
-            G, pos, ax=ax,
-            node_color=[DataStore.NODE_COLORS[n] for n in G.nodes()],
-            node_size=1500,
-            linewidths=2.5,
-            edgecolors="#ffffff",
-        )
-
-    def _draw_labels(self, ax, pos: dict):
-        """Draw white bold account-ID labels on each node."""
-        nx.draw_networkx_labels(
-            self._graph, pos, ax=ax,
-            font_color="white",
-            font_size=9,
-            font_weight="bold",
-        )
+    def __init__(self, connector: PipelineConnector):
+        self._connector = connector
 
     def render(self):
-        """Render the section header and the matplotlib graph figure."""
+        """Render the network graph section."""
         st.markdown(
-            '<div class="section-header">◈ Fund Flow Network</div>'
-            '<div class="section-sub">Visualizing financial transactions as graph</div>',
+            '<div class="section-header">◈ Fund Flow Network Graph</div>'
+            '<div class="section-sub">Interactive transaction graph — hover nodes for details · Red=High Risk · Amber=Medium · Green=Safe</div>',
             unsafe_allow_html=True,
         )
 
-        pos = DataStore.NODE_POSITIONS
+        nodes, edges = self._connector.get_graph_data()
+        if not nodes:
+            st.info("No graph data available. Run pipeline first.")
+            return
 
-        fig, ax = plt.subplots(figsize=(7, 4.5))
-        fig.patch.set_facecolor("#f8faff")
-        ax.set_facecolor("#f8faff")
+        fig = self._build_plotly_figure(nodes, edges)
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
-        self._draw_edges(ax, pos)
-        self._draw_nodes(ax, pos)
-        self._draw_labels(ax, pos)
+    def _build_plotly_figure(self, nodes, edges):
+        """Build Plotly figure with spring layout positions."""
+        # Build a temporary nx graph for layout
+        G = nx.DiGraph()
+        node_ids = {n["id"] for n in nodes}
+        for n in nodes:
+            G.add_node(n["id"])
+        for e in edges:
+            if e["source"] in node_ids and e["target"] in node_ids:
+                G.add_edge(e["source"], e["target"])
 
-        ax.set_xlim(-0.05, 1.05)
-        ax.set_ylim(-0.05, 1.05)
-        ax.axis("off")
-        plt.tight_layout(pad=0.3)
+        # Spring layout for nice spacing
+        pos = nx.spring_layout(G, seed=42, k=2.5 / math.sqrt(max(len(G.nodes()), 1)))
 
-        st.pyplot(fig, use_container_width=True)
-        plt.close(fig)
-        st.markdown("")
+        # ── Edge traces (one per color group) ──────────────────────────
+        edge_traces = []
+        for e in edges:
+            if e["source"] not in pos or e["target"] not in pos:
+                continue
+            x0, y0 = pos[e["source"]]
+            x1, y1 = pos[e["target"]]
+            # Draw arrow line
+            edge_traces.append(go.Scatter(
+                x=[x0, x1, None], y=[y0, y1, None],
+                mode="lines",
+                line=dict(color=e["color"], width=1.5),
+                hoverinfo="none",
+                showlegend=False,
+            ))
+
+        # ── Node trace ──────────────────────────────────────────────────
+        node_x, node_y, node_text, node_hover = [], [], [], []
+        node_colors, node_sizes = [], []
+        for n in nodes:
+            if n["id"] not in pos:
+                continue
+            x, y = pos[n["id"]]
+            node_x.append(x)
+            node_y.append(y)
+            node_text.append(n["label"])
+            node_hover.append(
+                f"<b>{n['id']}</b><br>"
+                f"Risk Level: <b>{n['risk_level'].upper()}</b><br>"
+                f"Risk Score: <b>{n['score']}</b>"
+            )
+            node_colors.append(n["color"])
+            node_sizes.append(n["size"])
+
+        node_trace = go.Scatter(
+            x=node_x, y=node_y,
+            mode="markers+text",
+            hoverinfo="text",
+            hovertext=node_hover,
+            text=node_text,
+            textposition="bottom center",
+            textfont=dict(color="#c7d2fe", size=9, family="JetBrains Mono"),
+            marker=dict(
+                color=node_colors,
+                size=node_sizes,
+                line=dict(color="#0f1525", width=2),
+                opacity=0.95,
+            ),
+            showlegend=False,
+        )
+
+        # ── Legend items ────────────────────────────────────────────────
+        legend_traces = [
+            go.Scatter(x=[None], y=[None], mode="markers",
+                       marker=dict(color="#ef4444", size=12),
+                       name="High Risk (Alert)"),
+            go.Scatter(x=[None], y=[None], mode="markers",
+                       marker=dict(color="#f59e0b", size=12),
+                       name="Medium Risk (Flag)"),
+            go.Scatter(x=[None], y=[None], mode="markers",
+                       marker=dict(color="#22c55e", size=12),
+                       name="Low Risk (Allow)"),
+        ]
+
+        all_traces = edge_traces + [node_trace] + legend_traces
+
+        fig = go.Figure(
+            data=all_traces,
+            layout=go.Layout(
+                paper_bgcolor="rgba(10,14,26,0.0)",
+                plot_bgcolor="rgba(15,21,37,0.6)",
+                margin=dict(l=10, r=10, t=10, b=10),
+                height=390,
+                xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                yaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                showlegend=True,
+                legend=dict(
+                    x=0.02, y=0.98,
+                    bgcolor="rgba(15,21,37,0.8)",
+                    bordercolor="rgba(99,102,241,0.3)",
+                    borderwidth=1,
+                    font=dict(color="#94a3b8", size=10),
+                ),
+                hoverlabel=dict(
+                    bgcolor="#1e293b", bordercolor="#4f46e5",
+                    font=dict(color="#e2e8f0", size=11, family="Inter"),
+                ),
+            )
+        )
+        return fig
